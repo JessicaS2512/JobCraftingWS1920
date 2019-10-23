@@ -9,4 +9,4 @@
 
 **3. Faktorenraum**
 
-![Faktorenraum](Faktorenraum-3.jpg)
+![Faktorenraum](file:///Users/jenniferschnier/Desktop/Faktorenraum-3.jpg)
