@@ -9,4 +9,4 @@
 
 **3. Faktorenraum**
 
-![Faktorenraum](Faktorenraum-3.jpg)
+![](https://github.com/JessicaS2512/hello-world/blob/master/Untitled%20Diagram.jpg?raw=true)
