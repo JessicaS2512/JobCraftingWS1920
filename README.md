@@ -5,7 +5,7 @@
 
 **1. Teammitglieder:** Caroline Kreiß, Jennifer Schnier, Isabel Grevenstein, Maike Holle, Jessica Schmitz
 
-**2. Fragestellung:** Welchen Einfluss haben organisatorische und individuelle Faktoren auf den Umgang der Mitarbeiter mit Veränderungen innerhalb des Unternehmens?
+**2. Fragestellung:** Welche Auswirkungen hat die Art und Weise der Kommunikation von organisatorischen Veränderungen in einem unternehmen auf das Job Crafting der betroffenen Mitarbeiter?
 
 **3. Faktorenraum**
 
