@@ -1,4 +1,9 @@
 ---
+output:
+  pdf_document: default
+  html_document: default
+---
+---
 ## JobCraftingWS1920
 
 
@@ -9,4 +14,4 @@
 
 **3. Faktorenraum**
 
-![](https://github.com/JessicaS2512/hello-world/blob/master/Untitled%20Diagram.jpg?raw=true)
+![Faktorenraum](images/Faktorenraum)
