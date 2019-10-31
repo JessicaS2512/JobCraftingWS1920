@@ -1,11 +1,12 @@
+---
 ## JobCraftingWS1920
 
 
 
-**Teammitglieder:** Caroline Kreiß, Jennifer Schnier, Isabel Grevenstein, Maike Holle, Jessica Schmitz
+**1. Teammitglieder:** Caroline Kreiß, Jennifer Schnier, Isabel Grevenstein, Maike Holle, Jessica Schmitz
 
-**Fragestellung:** Welchen Einfluss haben organisatorische und individuelle Faktoren auf den Umgang der Mitarbeiter mit Veränderungen innerhalb des Unternehmens?
+**2. Fragestellung:** Welche Auswirkungen hat die Art und Weise der Kommunikation von organisatorischen Veränderungen in einem unternehmen auf das Job Crafting der betroffenen Mitarbeiter?
 
-**Faktorenraum**
+**3. Faktorenraum**
 
-![](C:\Users\jessi\Documents\R\faktorenraum-3.jpg)
+![](https://github.com/JessicaS2512/hello-world/blob/master/Untitled%20Diagram.jpg?raw=true)
