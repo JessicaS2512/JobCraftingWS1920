@@ -1,5 +1,5 @@
 # AnalyseScript.R
-## Teamnamen: Job Crafting
+## Teamname: Job Crafting
 
 # Pakete laden: ----
 
