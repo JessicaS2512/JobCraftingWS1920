@@ -5,7 +5,7 @@
 
 **1. Teammitglieder:** Caroline Kreiß, Jennifer Schnier, Isabel Grevenstein, Maike Holle, Jessica Schmitz
 
-**2. Fragestellung:** Welche Auswirkungen hat die Art und Weise der Kommunikation von organisatorischen Veränderungen in einem unternehmen auf das Job Crafting der betroffenen Mitarbeiter?
+**2. Fragestellung:** Wie unterscheidet sich das Job Crafting zwischen gewinn- und sicherheitsorientierten Personen in Abhängigkeit von den zur Kommunikation von organisatorischen Veränderungen eingesetzten Medien?
 
 **3. Faktorenraum**
 
