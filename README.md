@@ -44,6 +44,8 @@ Regulatorischer Fokus (auf einer Skala von 1 (totally disagree) bis 6 (totally a
 * If my job did not allow for advancement, I would likely find a new one.
 * A chance to grow is an important factor for me when looking for a job.
 
+-> Diese Skala wird auch von der Gruppe Transformation/Leadership verwendet.
+
 Job Crafting (auf einer Skala von 1 (never) bis 6 (always)) (vgl. Petrou et al. 2012):
 
 * I ask others for feedback on my job performance.
