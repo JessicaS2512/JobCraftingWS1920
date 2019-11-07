@@ -9,4 +9,4 @@
 
 **3. Faktorenraum**
 
-![Faktorenraum](https://raw.githubusercontent.com/JessicaS2512/JobCraftingWS1920/master/images/Faktorenraum.png)
+![Faktorenraum](https://raw.githubusercontent.com/JessicaS2512/JobCraftingWS1920/master/images/Faktorenraum%20Job%20Crafting.png)
