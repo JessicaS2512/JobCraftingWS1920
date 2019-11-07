@@ -20,7 +20,6 @@
 **5. Was genau wir in unserem Fragebogen messen wollen ...**
 
 * demografische Daten
-* Tätigkeit
 * regulatorischer Fokus
 * Medieneinsatz
 * Job Crafting
