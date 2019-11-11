@@ -59,7 +59,7 @@ Job Crafting (auf einer Skala von 1 (never) bis 6 (always)) (vgl. Petrou et al. 
 * I try to ensure that my work is physically less intense.
 * I try to simplify the complexity of my tasks at work.
 
-**6. Womit wir noch Probleme haben ...**
+**7. Womit wir noch Probleme haben ...**
 
 Es ist zu erwarten, dass unsere Stichprobe zu einem großen Teil aus Studenten bestehen wird, die kaum oder noch gar keine Berufserfahrung haben. Auch bei den Probanden, die schon berufstätig sind, ist es fragwürdig, ob sie schon in ihrem Unternehmen eine organisatorische Veränderung miterlebt haben. Deshalb ist es notwendig, ein Szenario zu verwenden. Die Umsetzung eines Szenarios ist aber aus folgenden Gründen problematisch:
 
