@@ -10,7 +10,7 @@
 
 * Anknüpfungspunkt: Wir wollen die Art der Kommunikation (und folglich deren Auswirkung auf das Job Crafting) in Form des Medieneinsatzes, unter Berücksichtigung des regulatorischen Fokus, genauer untersuchen.
 
-**3. Fragestellung:** Wie unterscheidet sich das Job Crafting zwischen gewinn- und sicherheitsorientierten Personen in Abhängigkeit von den zur Kommunikation von organisatorischen Veränderungen eingesetzten Medien?
+**3. Fragestellung:** Wie unterscheidet sich das Job Crafting zwischen gewinn- und sicherheitsorientierten Personen in Abhängigkeit von der Qualität der Kommunikation von organisatorischen Veränderungen?
 
 **4. Faktorenraum**
 
