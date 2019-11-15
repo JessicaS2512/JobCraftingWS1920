@@ -56,4 +56,4 @@ Job Crafting (auf einer Skala von 1 (never) bis 6 (always)) (vgl. Petrou et al. 
 * I try to ensure that my work is emotionally less intense.
 * I make sure that my work is mentally less intense.
 * I try to ensure that my work is physically less intense.
-* I try to simplify the complexity of my tasks at work.
+* I try to simplify the com
