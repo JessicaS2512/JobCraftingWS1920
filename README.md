@@ -6,9 +6,10 @@
 
 **2. Unser Fokus:** 
 
-* Ausgangspunkt: Je nach regulatorischem Fokus von Arbeitnehmern sind unterschiedliche Arten der Kommunikation förderlich/hinderlich für die Arbeitsgestaltung.
-
-* Anknüpfungspunkt: Wir wollen die Art der Kommunikation (und folglich deren Auswirkung auf das Job Crafting) in Form des Medieneinsatzes, unter Berücksichtigung des regulatorischen Fokus, genauer untersuchen.
+* Wir wollen das Job Crafting von Personen in Abhängigkeit von der Qualität der Kommunikation innerhalb eines Unternehmens untersuchen.
+* Außerdem prüfen wir, welche Unterschiede es dabei hinsichtlich des regulatorischen Fokus gibt, das heißt wie sich dabei das Job Crafting zwischen gewinn- und sicherheitsorientierten Personen unterscheidet.
+* Dabei arbeiten wir mit zwei Szenarien, in denen beschrieben wird, dass ein digitaler Instant-Messaging-Dienst zur Kommunikation (z. B. Slack) in einem Unternehmen eingeführt wird. In einem Szenario beschreiben wir, dass die Kommunikation zur Einführung des Programms qualitativ hochwertig war. In dem anderen Szenario schreiben wir, dass diese Kommunikation qualitativ minderwertiger war. 
+* Mittels dieser Szenarien wollen wir herausfinden, inwieweit sich das Job Crafting der Befragten dabei unterscheidet. 
 
 **3. Fragestellung:** Wie unterscheidet sich das Job Crafting zwischen gewinn- und sicherheitsorientierten Personen in Abhängigkeit von der Qualität der Kommunikation von organisatorischen Veränderungen?
 
@@ -18,42 +19,35 @@
 
 **5. Was genau wir in unserem Fragebogen messen wollen ...**
 
-* demografische Daten
+* demografische Daten (Alter, Geschlecht, aktuelle Tätigkeit, höchster Bildungsabschluss)
 * regulatorischer Fokus
-* Medieneinsatz
-* Job Crafting
-
-Auf diese Weise wollen wir den Einfluss der eingesetzten Medien auf das Job Crafting und die Unterschiede in Abhängigkeit vom regulatorischen Fokus untersuchen.
+* Job Crafting (bei qualitativ hochwertiger vs. bei qualitativ minderwertiger Unternehmenskommunikation)
 
 **6. Unsere Skalen**
 
-Den regulatorischen Fokus und das Job Crafting wollen wir mit den Skalen messen, die auch in dem uns vorliegenden Paper verwendet wurden:
-
 Regulatorischer Fokus (auf einer Skala von 1 (totally disagree) bis 6 (totally agree)) (vgl. Neubert et al. 2008):
 
-* I concentrate on completing my work tasks correctly to increase my job security.
-* At work I focus my attention on completing my assigned responsibilities.
-* Fulfilling my work duties is very important to me.
-* At work, I strive to live up to the responsibilities and duties given to me by others.
-* At work, I am often focused on accomplishing tasks that will support my need for security.
-* I take chances at work to maximize my goals for advancement.
-* I tend to take risks at work in order to achieve success.
-* If I had an opportunity to participate on a high-risk, high-reward project I would definitely take it.
-* If my job did not allow for advancement, I would likely find a new one.
-* A chance to grow is an important factor for me when looking for a job.
+* Ich nutze Chancen bei der Arbeit, um das Beste für meine Weiterentwicklung zu erreichen.
+* Ich neige dazu, Risiken bei der Arbeit einzugehen, um Erfolg zu haben.
+* Wenn mein Job mir keine Weiterentwicklungsmöglichkeiten bieten würde, würde ich mich nach einem neuen Job umsehen.
+* Die Chance auf Weiterentwicklung ist ein wichtiger Faktor für mich bei der Arbeitsplatzsuche.
+* Ich konzentriere mich darauf, meine Arbeitsaufgaben korrekt abzuschließen, um meinen Arbeitsplatz zu sichern.
+* Bei der Arbeit konzentriere ich mich darauf, meine Aufgabenbereiche vollständig auszufüllen.
+* Meine Verpflichtungen auf der Arbeit zu erfüllen ist sehr wichtig für mich.
+* Ich bin auf der Arbeit darauf bedacht, Aufgaben zu erfüllen, die meinen Arbeitsplatz sichern.
 
 -> Diese Skala wird auch von der Gruppe Transformation/Leadership verwendet.
 
-Job Crafting (auf einer Skala von 1 (never) bis 6 (always)) (vgl. Petrou et al. 2012):
+Job Crafting (auf einer Skala von 1 (never) bis 6 (always)) 
+Als Basis für die Messung des Job Craftings haben wir die Skala aus dem uns vorliegenden Paper verwendet (vgl. Petrou et al. 2012). Diese haben wir auf deutsch übersetzt und inhaltlich an unsere Szenarien angepasst:
+Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, bringt mich dazu ...
 
-* I ask others for feedback on my job performance.
-* I ask colleagues for advice.
-* I ask my supervisor for advice.
-* I try to learn new things at work.
-* I ask for more tasks if I finish my work.
-* I ask for more responsibilities.
-* I ask for more odd jobs.
-* I try to ensure that my work is emotionally less intense.
-* I make sure that my work is mentally less intense.
-* I try to ensure that my work is physically less intense.
-* I try to simplify the com
+* ... Kollegen um Rat zu dem neu eingeführten Programm zu fragen.
+* ... meinen Vorgesetzten um Rat zu dem neu eingeführten Programm zu fragen.
+* ... dass ich versuche, Neues zu dem eingeführten Programm zu lernen.
+* ... dass ich noch mehr Funktionen des Programms kennenlernen möchte, sobald ich die Grundlagen verstanden habe.
+* ... um mehr Verantwortung in Bezug auf die Informationsweitergabe/Kommunikation zu bitten
+* ... nach weiteren Aufgaben zu fragen, wenn ich meine Arbeit erledigt habe
+* ... dass ich versuche, die Einarbeitung in das Programm für mich so zu gestalten, dass es mental wenig anspruchsvoll ist.
+* ... dass ich versuche, die Einarbeitung in das Programm für mich so zu gestalten, dass es emotional wenig anspruchsvoll ist.
+* ... dass ich versuche, die Einarbeitung in das Programm für mich so zu gestalten, dass es körperlich wenig anspruchsvoll ist.
