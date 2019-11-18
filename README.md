@@ -9,7 +9,7 @@
 * Wir wollen das Job Crafting von Personen in Abhängigkeit von der Qualität der Kommunikation innerhalb eines Unternehmens untersuchen.
 * Außerdem prüfen wir, welche Unterschiede es dabei hinsichtlich des regulatorischen Fokus gibt, das heißt wie sich dabei das Job Crafting zwischen gewinn- und sicherheitsorientierten Personen unterscheidet.
 * Dabei arbeiten wir mit zwei Szenarien, in denen beschrieben wird, dass ein digitaler Instant-Messaging-Dienst zur Kommunikation (z. B. Slack) in einem Unternehmen eingeführt wird. In einem Szenario beschreiben wir, dass die Kommunikation zur Einführung des Programms qualitativ hochwertig war. In dem anderen Szenario schreiben wir, dass diese Kommunikation qualitativ minderwertiger war. 
-* Mittels dieser Szenarien wollen wir herausfinden, inwieweit sich das Job Crafting der Befragten dabei unterscheidet. 
+* Wir wollen herausfinden, inwieweit sich das Job Crafting der Befragten zwischen diesen beiden Szenarien und in Bezug auf ihren regulatorischen Fokus unterscheidet.
 
 **3. Fragestellung:** Wie unterscheidet sich das Job Crafting zwischen gewinn- und sicherheitsorientierten Personen in Abhängigkeit von der Qualität der Kommunikation von organisatorischen Veränderungen?
 
