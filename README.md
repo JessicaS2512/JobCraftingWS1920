@@ -66,17 +66,18 @@ H1: Bei guter Kommunikation von organisatorischen Veränderungen in einem Untern
 Testverfahren: Anova 
 Anmerkung; Prev/Prom als Faktor festlegen
 
-3. Hypothese: 
-H0: Männer und Frauen unterscheiden sich nicht in ihrer Gewinnorientierung.  
-H1: Männer und Frauen unterscheiden sich in ihrer Gewinnorientierung.  
-Testverfahren: t-test  
+3. Hypothese: Gewinnorientierte Personen suchen bei guter Kommunikation eher nach Herausforderungen als sicherheitsorienterte Personen.
+H0: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen. 
+H1: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen. 
+Testverfahren: ?
 
-4. Hypothese: Je höher der Bildungsabschluss, desto gewinnorientierter sind die Personen.  
-H0: Der Bildungsabschluss hat keinen Einfluss auf das Job Crafting.  
-H1: Der Bildungsabschluss hat einen Einfluss auf das Job Crafting.  
-Testverfahren: Anova  
+4. Hypothese: Sicherheitsorientierte Personen versuchen bei guter Kommunikation eher Anforderungen zu reduzieren als gewinnorientierte Peronen.
+H0: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Reduktion der Anforderungen zwischen gewinn- und sicherheitsorientierten Personen.
+H1: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Reduktion der Anforderungen zwischen gewinn- und sicherheitsorientierten Personen. 
+Testverfahren: ?
 
-5. Hypothese: Menschen mit längerer Berufserfahrung haben bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen höheres Job Crafting als Menschen mit kürzerer Berufserfahrung.  
-H0: Das Job Crafting ist nicht abhängig von der Länge der Berufserfahrung.  
-H1: Das Job Crafting ist abhängig von der Länge der Berufserfahrung.   
-Testverfahren: Anova  
+5. Hypothese: Sicherheitsorientierte Personen suchen bei schlechter Kommunikation eher nach Hilfestellung als gewinnorientierte Personen.
+H0: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Hilfestellung zwischen gewinn- und sicherheitsorientierten Personen.  
+H1: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Hilfestellung zwischen gewinn- und sicherheitsorientierten Personen.  
+Testverfahren: ?
+
