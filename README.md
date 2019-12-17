@@ -54,19 +54,19 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 
 **7. Hypothesen**
 
-1. Hypothese: Sicherheitsorientierte Personen haben bei schlechter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als gewinnorientierte Personen.  
+1. Hypothese: Sicherheitsorientierte Personen haben bei schlechter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als nicht-sicherheitsorientierte Personen.  
 H0: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
 H1: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
-Testverfahren:  
-Problem: Da sowohl sicherheits-/gewinnorientiert (regulatorischer Fokus) als auch Job Crafting intervallskaliert sind (?!), wissen wir nicht, ob sich diese Variablen anhand einer Unterschiedshypothese testen lassen. Müsste man das nicht anhand einer Zusammenhangshypothese testen?  
+Testverfahren: Anova 
+Anmerkung: Prev/Prom als Faktor festlegen
 
-2. Hypothese: Gewinnorientierte Personen haben bei guter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als sicherheitsorientierte Personen.   
+2. Hypothese: Gewinnorientierte Personen haben bei guter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als nicht-gewinnorientierte Personen.   
 H0: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
 H1: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
-Testverfahren:  
-Problem: S.o.   
+Testverfahren: Anova 
+Anmerkung; Prev/Prom als Faktor festlegen
 
-3. Hypothese: Männer sind gewinnorientierter als Frauen.  
+3. Hypothese: 
 H0: Männer und Frauen unterscheiden sich nicht in ihrer Gewinnorientierung.  
 H1: Männer und Frauen unterscheiden sich in ihrer Gewinnorientierung.  
 Testverfahren: t-test  
