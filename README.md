@@ -54,29 +54,29 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 
 **7. Hypothesen**
 
-1. Hypothese: Sicherheitsorientierte Personen haben bei schlechter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als gewinnorientierte Personen.
-H0: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen
-H1: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen
-Testverfahren: 
-Problem: Da sowohl sicherheits-/gewinnorientiert (regulatorischer Fokus) als auch Job Crafting intervallskaliert sind (?!), wissen wir nicht, ob sich diese Variablen anhand einer Unterschiedshypothese testen lassen. Müsste man das nicht anhand einer Zusammenhangshypothese testen? 
+1. Hypothese: Sicherheitsorientierte Personen haben bei schlechter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als gewinnorientierte Personen.  
+H0: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
+H1: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
+Testverfahren:  
+Problem: Da sowohl sicherheits-/gewinnorientiert (regulatorischer Fokus) als auch Job Crafting intervallskaliert sind (?!), wissen wir nicht, ob sich diese Variablen anhand einer Unterschiedshypothese testen lassen. Müsste man das nicht anhand einer Zusammenhangshypothese testen?  
 
-2. Hypothese: Gewinnorientierte Personen haben bei guter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als sicherheitsorientierte Personen. 
-H0: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.
-H1: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.
-Testverfahren:
-Problem: S.o. 
+2. Hypothese: Gewinnorientierte Personen haben bei guter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als sicherheitsorientierte Personen.   
+H0: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
+H1: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
+Testverfahren:  
+Problem: S.o.   
 
-3. Hypothese: Männer sind gewinnorientierter als Frauen.
-H0: Männer und Frauen unterscheiden sich nicht in ihrer Gewinnorientierung.
-H1: Männer und Frauen unterscheiden sich in ihrer Gewinnorientierung.
-Testverfahren: t-test
+3. Hypothese: Männer sind gewinnorientierter als Frauen.  
+H0: Männer und Frauen unterscheiden sich nicht in ihrer Gewinnorientierung.  
+H1: Männer und Frauen unterscheiden sich in ihrer Gewinnorientierung.  
+Testverfahren: t-test  
 
-4. Hypothese: Je höher der Bildungsabschluss, desto gewinnorientierter sind die Personen.
-H0: Der Bildungsabschluss hat keinen Einfluss auf das Job Crafting.
-H1: Der Bildungsabschluss hat einen Einfluss auf das Job Crafting.
-Testverfahren: Anova
+4. Hypothese: Je höher der Bildungsabschluss, desto gewinnorientierter sind die Personen.  
+H0: Der Bildungsabschluss hat keinen Einfluss auf das Job Crafting.  
+H1: Der Bildungsabschluss hat einen Einfluss auf das Job Crafting.  
+Testverfahren: Anova  
 
-5. Hypothese: Menschen mit längerer Berufserfahrung haben bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen höheres Job Crafting als Menschen mit kürzerer Berufserfahrung.
-H0: Das Job Crafting ist nicht abhängig von der Länge der Berufserfahrung.
-H1: Das Job Crafting ist abhängig von der Länge der Berufserfahrung. 
-Testverfahren: Anova
+5. Hypothese: Menschen mit längerer Berufserfahrung haben bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen höheres Job Crafting als Menschen mit kürzerer Berufserfahrung.  
+H0: Das Job Crafting ist nicht abhängig von der Länge der Berufserfahrung.  
+H1: Das Job Crafting ist abhängig von der Länge der Berufserfahrung.   
+Testverfahren: Anova  
