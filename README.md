@@ -55,29 +55,40 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **7. Hypothesen**
 
 1. Hypothese: Sicherheitsorientierte Personen haben bei schlechter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als nicht-sicherheitsorientierte Personen.  
-H0: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
-H1: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
-Testverfahren: Anova 
-Anmerkung: Prev/Prom als Faktor festlegen
+**H0**: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
+**H1**: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
+**Testverfahren**: t-Test für unverbundene Stichproben  
+**UV**: regulatorischer Fokus (sicherheitsorientiert vs. nicht-sicherheitsorientiert)  
+**AV**: Grad des Job Craftings  
+**Anmerkung**: Prev/Prom als Faktor festlegen
+
 
 2. Hypothese: Gewinnorientierte Personen haben bei guter Kommunikation von organisatorischen Veränderungen höheres Job Crafting als nicht-gewinnorientierte Personen.   
-H0: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
-H1: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinn- und sicherheitsorientierten Personen.  
-Testverfahren: Anova 
-Anmerkung; Prev/Prom als Faktor festlegen
+**H0**: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinnorientierten und nicht-gewinnorientierten Personen.  
+**H1**: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinnorientierten und nicht-gewinnorientierten Personen.  
+**Testverfahren**: t-Test für unverbundene Stichproben  
+**UV**: regulatorischer Fokus (gewinnorientiert vs. nicht-gewinnorientiert)  
+**AV**: Grad des Job Craftings  
+**Anmerkung**: Prev/Prom als Faktor festlegen
 
-3. Hypothese: Gewinnorientierte Personen suchen bei guter Kommunikation eher nach Herausforderungen als sicherheitsorienterte Personen.
-H0: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen. 
-H1: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen. 
-Testverfahren: ?
+3. Hypothese: Gewinnorientierte Personen suchen bei guter Kommunikation eher nach Herausforderungen als nicht-gewinnorientierte Personen.  
+**H0**: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.  
+**H1**: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.  
+**Testverfahren**: t-Test für unverbundene Stichproben  
+**UV**: regulatorischer Fokus (gewinnorientiert vs. nicht-gewinnorientiert)  
+**AV**: Sucher nach Herausforderungen
 
-4. Hypothese: Sicherheitsorientierte Personen versuchen bei guter Kommunikation eher Anforderungen zu reduzieren als gewinnorientierte Peronen.
-H0: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Reduktion der Anforderungen zwischen gewinn- und sicherheitsorientierten Personen.
-H1: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Reduktion der Anforderungen zwischen gewinn- und sicherheitsorientierten Personen. 
-Testverfahren: ?
+4. Hypothese: Sicherheitsorientierte Personen versuchen bei guter Kommunikation eher Anforderungen zu reduzieren als nicht-sicherheitsorientierte Personen.  
+**H0**: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
+**H1**: Bei guter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
+**Testverfahren**: t-Test für unverbundene Stichproben  
+**UV**: regulatorischer Fokus (sicherheitsorientiert vs. nicht-sicherheitsorientiert)  
+**AV**: Reduktion von Anforderungen
 
-5. Hypothese: Sicherheitsorientierte Personen suchen bei schlechter Kommunikation eher nach Hilfestellung als gewinnorientierte Personen.
-H0: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Hilfestellung zwischen gewinn- und sicherheitsorientierten Personen.  
-H1: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Hilfestellung zwischen gewinn- und sicherheitsorientierten Personen.  
-Testverfahren: ?
+5. Hypothese: Sicherheitsorientierte Personen suchen bei schlechter Kommunikation eher nach Hilfestellung als nicht-sicherheitsorientierte Personen.  
+**H0**: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Hilfestellung zwischen sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
+**H1**: Bei schlechter Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Hilfestellung zwischen sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
+**Testverfahren**: t-Test für unverbundene Stichproben  
+**UV**: regulatorischer Fokus (sicherheitsorientiert vs. nicht-sicherheitsorientiert)  
+**AV**: Suche nach Hilfestellung
 
