@@ -83,10 +83,10 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **UV**: regulatorischer Fokus (sicherheitsorientiert vs. nicht-sicherheitsorientiert)  
 **AV**: Reduktion von Anforderungen
 
-5. Hypothese: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen. 
-**H0**: Die Tätigkeit wirkt sich nicht auf das Job Crafting aus.
-**H1**: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.
-**Testverfahren**: Anova
+5. Hypothese: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.   
+**H0**: Die Tätigkeit wirkt sich nicht auf das Job Crafting aus.  
+**H1**: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.  
+**Testverfahren**: Anova  
 **UV**: Tätigkeit  
-**AV**: Job Crafting / Grad des Job Craftings
+**AV**: Job Crafting / Grad des Job Craftings  
 
