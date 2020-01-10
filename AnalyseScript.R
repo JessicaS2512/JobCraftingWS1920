@@ -106,5 +106,5 @@ median(datensatz$REGFOC)
 
 #Der Median liegt bei 3.5. Das heißt wir erstellen anhand dessen zwei Gruppen (aufgeteilt in promotion/prevention). Also von 1 bis 3.5 prevention und von 3.5 bis 6 promotion. 
 
-
+prevention <- filter(datensatz$REGFOC < 3.5)
 
