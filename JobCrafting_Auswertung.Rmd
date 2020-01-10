@@ -1,0 +1,19 @@
+---
+title: "JobCrafting_Auswertung"
+author: "Caroline Kreiß"
+date: "10 1 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(ggplot2)
+library(jmv)
+library(devtools)
+
+job_crafting <- read_csv("job_crafting.csv")
+
+```
+
