@@ -54,6 +54,8 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 
 **7. Hypothesen**
 
+**Unterschiedshypothesen**
+
 1. Hypothese: Sicherheitsorientierte Personen haben bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als nicht-sicherheitsorientierte Personen.  
 **H0**: Bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
 **H1**: Bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
@@ -90,3 +92,22 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **UV**: Tätigkeit  
 **AV**: Job Crafting / Grad des Job Craftings  
 
+**Zusammenhangshypothesen**
+
+6. Hypothese: Je tiefer der regulatorische Fokus, desto höher ist das Job Crafting bei schlechter Kommunikation von Veränderungen in einem Unternehmen. 
+Testverfahren: Korrelation (Pearson)
+
+7. Hypothese: Je höher der regulatorische Fokus, desto höher ist das Job Crafting bei guter Kommunikation von Veränderungen in einem Unternehmen.
+Testverfahren: Korrelation (Pearson)
+
+8. Hypothese: Je tiefer der regulatorische Fokus, desto niedriger ist das Job Crafting bei guter Kommunikation.
+Testverfahren: Korrelation (Pearson)
+
+9. Hypothese: Je höher der regulatorische Fokus, desto niedriger ist das Job Crafting bei schlechter Kommunikation.
+Testverfahren: Korrelation (Pearson)
+
+10. Hypothese: Job Crafting bei schlechter Kommunikation von Veränderungen in einem Unternehmen ist abhängig von regulatorischem Fokus, Alter und Berufsstand.
+Testverfahren: lineare Regression
+
+11. Hypothese: Job Crafting bei guter Kommunikation von Veränderungen in einem Unternehmen ist abhängig von regulatorischem Fokus, Alter und Berufsstand. 
+Testverfahren: lineare Regression
