@@ -3,16 +3,19 @@
 
 # Pakete laden: ----
 library(tidyverse)
-source("data/qualtricshelpers.R")
+source("data/qualtricshelpers.R") 
 library(psych)
+library(ggplot2)
+library(jmv)
+library(devtools)
 # Rohdaten laden: ----
-raw <- read_csv("data/qualtrics_export.csv")
+raw <- read_csv("job_crafting.csv")
 
 # DataCleaning und Skalenberechnung: ----
 
-raw <- load_qualtrics_csv("data/qualtrics_export.csv")
+raw <- load_qualtrics_csv("job_crafting.csv")
 
-filename <- "data/qualtrics_export.csv"
+filename <- "job_crafting.csv" 
 
 names(raw)
 
