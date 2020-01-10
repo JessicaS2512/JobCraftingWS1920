@@ -112,5 +112,8 @@ median(datensatz$REGFOC)
 
 #Für die Unterschiedshypothesen: Filtern des REGFOC in prev/prom, um eine faktorielle Variable zu erhalten.
 #ich habe prev größer gleich 3.125 gesetzt, denn wenn man es andersherum macht (prom kleiner gleich 3.125) sind die Gruppen sehr unterschiedlich groß.
-prevention <- datensatz %>% filter(REGFOC <= 3.125)
-promotion <- datensatz %>% filter(REGFOC > 3.125)
+
+
+# Hypothese 1
+t.test(filter(datensatz, REGFOC >= 3.125)$JC_SCEN1, filter(datensatz, REGFOC < 3.125)$JC_SCEN2)
+
