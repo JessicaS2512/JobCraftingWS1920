@@ -114,6 +114,26 @@ median(datensatz$REGFOC)
 #ich habe prev größer gleich 3.125 gesetzt, denn wenn man es andersherum macht (prom kleiner gleich 3.125) sind die Gruppen sehr unterschiedlich groß.
 
 
-# Hypothese 1
-t.test(filter(datensatz, REGFOC >= 3.125)$JC_SCEN1, filter(datensatz, REGFOC < 3.125)$JC_SCEN2)
+
+# Hypothese 1 - unverbundener t-test
+t.test(filter(datensatz, REGFOC >= 3.125)$JC_SCEN2, filter(datensatz, REGFOC < 3.125)$JC_SCEN2)
+
+#Bericht: t =  3.5491, df = 211.49, p-value = 0.0004761
+#alternative hypothesis: true difference in means is not equal to 0
+#95 percent confidence interval:
+# 0.05751134 0.20120697
+#sample estimates:
+#mean of x mean of y 
+#3.687764  3.558405 
+
+# Visualisierung Hypothese 1
+promotion <- subset(datensatz, datensatz$REGFOC >= 3.125)
+preventon <- subset(datensatz, datensatz$REGFOC < 3.125)
+regfoc_groups <- list(promotion, prevention)
+
+ggplot(datensatz) +
+  aes(x = regfoc_groups, weight = JC_SCEN2) +
+  geom_bar(fill = "#0c4c8a") +
+  theme_minimal()
+
 
