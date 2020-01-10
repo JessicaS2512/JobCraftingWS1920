@@ -104,8 +104,13 @@ datensatz <- datensatz %>%
 
 saveRDS(datensatz, "data/datensatz.rds")
 # Statistische Analyse und Grafiken:----
+
+# Errechnen des Medians, um den regulatorischen Fokus in zwei Gruppen (prevention/promotion) aufzuteilen
 median(datensatz$REGFOC)
 
-#Der Median liegt bei 3.5. Das heißt wir erstellen anhand dessen zwei Gruppen (aufgeteilt in promotion/prevention). Also von 1 bis 3.5 prevention und von 3.5 bis 6 promotion. 
+#Der Median liegt bei 3.125. Das heißt wir erstellen anhand dessen zwei Gruppen (aufgeteilt in promotion/prevention). Also von 1 bis 3.125 prevention und von 3.125 bis 6 promotion. 
 
-
+#Für die Unterschiedshypothesen: Filtern des REGFOC in prev/prom, um eine faktorielle Variable zu erhalten.
+#ich habe prev größer gleich 3.125 gesetzt, denn wenn man es andersherum macht (prom kleiner gleich 3.125) sind die Gruppen sehr unterschiedlich groß.
+prevention <- datensatz %>% filter(REGFOC <= 3.125)
+promotion <- datensatz %>% filter(REGFOC > 3.125)
