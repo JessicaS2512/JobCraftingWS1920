@@ -114,8 +114,7 @@ median(datensatz$REGFOC)
 #ich habe prev größer gleich 3.125 gesetzt, denn wenn man es andersherum macht (prom kleiner gleich 3.125) sind die Gruppen sehr unterschiedlich groß.
 
 
-
-# Hypothese 1 - unverbundener t-test
+# HYPOTHESE 1 - unverbundener t-test
 t.test(filter(datensatz, REGFOC >= 3.125)$JC_SCEN2, filter(datensatz, REGFOC < 3.125)$JC_SCEN2)
 
 #Bericht: t =  3.5491, df = 211.49, p-value = 0.0004761
@@ -126,14 +125,37 @@ t.test(filter(datensatz, REGFOC >= 3.125)$JC_SCEN2, filter(datensatz, REGFOC < 3
 #mean of x mean of y 
 #3.687764  3.558405 
 
-# Visualisierung Hypothese 1
-promotion <- subset(datensatz, datensatz$REGFOC >= 3.125)
-preventon <- subset(datensatz, datensatz$REGFOC < 3.125)
-regfoc_groups <- list(promotion, prevention)
+# da p = .0004 ist, kann H1 angenommen werden (Es gibt einen signifikanten Unterschied im JC von prev/prom bei schlechter Veränderungskommunikation)
 
-ggplot(datensatz) +
-  aes(x = regfoc_groups, weight = JC_SCEN2) +
+# Visualisierung Hypothese 1 - regfoc in zwei Gruppen teilen für Visualisierung
+
+regfoc_groups <- group_by(datensatz, REGFOC >= 3.125)
+
+as.factor(regfoc_groups)
+
+# x-Achse FALSE = prevention, TRUE = promotion
+
+library(ggplot2)
+library(plotrix)
+library(devtools)
+
+regfoc_groups %>%
+  group_by(`REGFOC >= 3.125`) %>%
+  summarise(Mean = mean(JC_SCEN2, na.rm = TRUE)-1, sem = std.error(JC_SCEN2))%>%
+  ggplot() +
+  aes(x = `REGFOC >= 3.125`, weight = Mean, ymin = Mean - sem, ymax = Mean + sem) +
   geom_bar(fill = "#0c4c8a") +
-  theme_minimal()
+  geom_errorbar(width = 0.2) +
+  scale_y_continuous(limits = c(0,5)) +
+  labs(x = "regulatorischer Fokus größer gleich 3.125", 
+       y = "Job Crafting bei schlechter Kommunikation", 
+       title = "title", 
+       subtitle = "subtitle", 
+       caption = "caption") +
+ theme_minimal() +
+NULL
 
+# diese andere Variante des t-test ergibt den gleichen p-Wert 
+regfoc_groups %>%
+  t.test(data = ., JC_SCEN2~`REGFOC >= 3.125`)
 
