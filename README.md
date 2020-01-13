@@ -45,12 +45,16 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 * ... Kollegen um Rat zu dem neu eingeführten Programm zu fragen. (Grad der Suche nach Hilfestellungen)
 * ... meinen Vorgesetzten um Rat zu dem neu eingeführten Programm zu fragen. (Grad der Suche nach Hilfestellungen)
 * ... dass ich versuche, Neues zu dem eingeführten Programm zu lernen. (Grad der Suche nach Hilfestellungen)
+
+
 * ... dass ich noch mehr Funktionen des Programms kennenlernen möchte, sobald ich die Grundlagen verstanden habe. (Grad der Suche nach Herausforderungen)
-* ... um mehr Verantwortung in Bezug auf die Informationsweitergabe/Kommunikation zu bitten (Grad der Suche nach Herausforderungen)
-* ... nach weiteren Aufgaben zu fragen, wenn ich meine Arbeit erledigt habe (Grad der Suche nach Herausforderungen)
-* ... dass ich versuche, die Einarbeitung in das Programm für mich so zu gestalten, dass es mental wenig anspruchsvoll ist. (Grad der Reduktion von Anforderungen)
-* ... dass ich versuche, die Einarbeitung in das Programm für mich so zu gestalten, dass es emotional wenig anspruchsvoll ist. (Grad der Reduktion von Anforderungen)
-* ... dass ich versuche, die Einarbeitung in das Programm für mich so zu gestalten, dass es körperlich wenig anspruchsvoll ist. (Grad der Reduktion von Anforderungen)
+* ... dass ich mich aktiv daran beteiligen möchte, das neue Programm im Unternehmen zu etablieren. (Grad der Suche nach Herausforderungen)
+* ... dass ich anderen Leuten dabei helfe, das Programm zu verstehen. (Grad der Suche nach Herausforderungen)
+
+
+* ... dass ich versuche, die Einarbeitung in das Programm für mich so zu gestalten, dass sie mental wenig anspruchsvoll ist. (Grad der Reduktion von Anforderungen)
+* ... dass ich versuche, die Einarbeitung in das Programm für mich so zu gestalten, dass sie emotional wenig anspruchsvoll ist. (Grad der Reduktion von Anforderungen)
+* ... dass ich versuche, die Nutzung des Programms für mich so simpel wie möglich zu halten. (Grad der Reduktion von Anforderungen)
 
 **7. Hypothesen**
 
