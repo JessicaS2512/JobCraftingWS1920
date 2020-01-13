@@ -170,10 +170,10 @@ regfoc_groups %>%
 t.test(filter(datensatz, REGFOC >= 3.125)$HERAUSF_JC_SCEN1,
        filter(datensatz, REGFOC < 3.125)$HERAUSF_JC_SCEN1)
 
-# Bericht zu Hypothese 3: In der Stichprobe suchen gewinnorientierte Personen (M=4.29) bei qualitativ hochwertiger Kommunikation
-# von organisatorischen Veränderungen eher nach Herausforderungen als nicht-gewinnorientierte Personen (M=4.15).
-# Dieser Unterschied ist signifikant (t(190.9)=2.25, p < .05) und liegt 95& Sicherheit zwischen 0.017 und 0.257 Punkten
-# einer 6-stufigen Skala.
+# Bericht zu Hypothese 3: In der Stichprobe suchen gewinnorientierte Personen (M=4.29) bei qualitativ hochwertiger
+# Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als nicht-gewinnorientierte
+# Personen (M=4.15). Dieser Unterschied ist signifikant (t(190.9)=2.25, p < .05) und liegt mit 95%iger Sicherheit
+# zwischen 0.017 und 0.257 Punkten einer 6-stufigen Skala.
 
 # Visualisierung Hypothese 3:
 regfoc_groups %>%
