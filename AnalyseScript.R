@@ -159,3 +159,21 @@ NULL
 regfoc_groups %>%
   t.test(data = ., JC_SCEN2~`REGFOC >= 3.125`)
 
+
+
+#HYPOTHESE 7 - Pearson Moment Korrelation
+cor(datensatz$REGFOC, datensatz$JC_SCEN1, method = "pearson")
+cor.test(datensatz$REGFOC, datensatz$JC_SCEN1, method = "pearson")
+
+#Matrix
+jmv::corrMatrix(datensatz, c("REGFOC", "JC_SCEN1"))
+#Es gibt keinen signifikanten Zusammenhang zwischen dem regulatorischen Fokus und dem Job Crafting bei guter Kommunikation von Veränderungen in einem Unternehmen ($\r=0.043$, $p=0.368$).
+
+#Visualisierung Hypothese 7
+datensatz %>%
+ggplot() + aes(x= REGFOC, y= JC_SCEN1) +
+geom_point(alpha=1)  + geom_smooth(method = "lm")+
+labs(x= "regulatorischer Fokus", y= "Job Crafting", title= "keine signifikante Korrelation zwischen regulatorischem Fokus und Job Crafting")
+ggsave("Hypothese7.png")
+NULL 
+#optional: geom_jitter statt geom_point und coord_cartesian(xlim=c(1,6), ylim=c(1,6))
