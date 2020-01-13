@@ -8,6 +8,8 @@ library(psych)
 library(ggplot2)
 library(jmv)
 library(devtools)
+library(plotrix)
+library(ggthemes)
 # Rohdaten laden: ----
 raw <- read_csv("job_crafting.csv")
 
@@ -87,7 +89,15 @@ raw_short$jc_scen2_question_7 <- ordered(raw_short$jc_scen2_question_7, levels =
 raw_short$jc_scen2_question_8 <- ordered(raw_short$jc_scen2_question_8, levels = scale.zustimmung)
 raw_short$jc_scen2_question_9 <- ordered(raw_short$jc_scen2_question_9, levels = scale.zustimmung)
 
-schluesselliste <- list(REGFOC = c("-regfoc_1", "-regfoc_2", "-regfoc_3", "-regfoc_4", "regfoc_5", "regfoc_6", "regfoc_7", "regfoc_8"), JC_SCEN1 = c("-jc_scen1_question_1", "-jc_scen1_question_2", "-jc_scen1_question_3", "-jc_scen1_question_4", "-jc_scen1_question_5", "-jc_scen1_question_6", "jc_scen1_question_7", "jc_scen1_question_8", "jc_scen1_question_9"), JC_SCEN2 = c("-jc_scen2_question_1", "-jc_scen2_question_2", "-jc_scen2_question_3", "-jc_scen2_question_4", "-jc_scen2_question_5", "-jc_scen2_question_6", "jc_scen2_question_7", "jc_scen2_question_8", "jc_scen2_question_9"))
+schluesselliste <- list(REGFOC = c("-regfoc_1", "-regfoc_2", "-regfoc_3", "-regfoc_4", "regfoc_5", "regfoc_6", "regfoc_7", "regfoc_8"),
+                        JC_SCEN1 = c("-jc_scen1_question_1", "-jc_scen1_question_2", "-jc_scen1_question_3", "-jc_scen1_question_4", "-jc_scen1_question_5", "-jc_scen1_question_6", "jc_scen1_question_7", "jc_scen1_question_8", "jc_scen1_question_9"),
+                        JC_SCEN2 = c("-jc_scen2_question_1", "-jc_scen2_question_2", "-jc_scen2_question_3", "-jc_scen2_question_4", "-jc_scen2_question_5", "-jc_scen2_question_6", "jc_scen2_question_7", "jc_scen2_question_8", "jc_scen2_question_9"),
+                        HILFE_JC_SCEN1 = c("-jc_scen1_question_1", "-jc_scen1_question_2", "-jc_scen1_question_3"),
+                        HILFE_JC_SCEN2 = c("-jc_scen2_question_1", "-jc_scen2_question_2", "-jc_scen2_question_3"),
+                        HERAUSF_JC_SCEN1 = c("-jc_scen1_question_4", "-jc_scen1_question_5", "-jc_scen1_question_6"),
+                        HERAUSF_JC_SCEN2 = c("-jc_scen2_question_4", "-jc_scen2_question_5", "-jc_scen2_question_6"),
+                        ANFORD_JC_SCNEN1 = c("jc_scen1_question_7", "jc_scen1_question_8", "jc_scen1_question_9"),
+                        ANFORD_JC_SCNEN2 = c("jc_scen2_question_7", "jc_scen2_question_8", "jc_scen2_question_9"))
 
 scoreItems(schluesselliste, raw_short)
 
@@ -113,11 +123,10 @@ median(datensatz$REGFOC)
 #Für die Unterschiedshypothesen: Filtern des REGFOC in prev/prom, um eine faktorielle Variable zu erhalten.
 #ich habe prev größer gleich 3.125 gesetzt, denn wenn man es andersherum macht (prom kleiner gleich 3.125) sind die Gruppen sehr unterschiedlich groß.
 
-
 # HYPOTHESE 1 - unverbundener t-test
 t.test(filter(datensatz, REGFOC >= 3.125)$JC_SCEN2, filter(datensatz, REGFOC < 3.125)$JC_SCEN2)
 
-#Bericht: t =  3.5491, df = 211.49, p-value = 0.0004761
+#Bericht zu Hypothese 1: t =  3.5491, df = 211.49, p-value = 0.0004761
 #alternative hypothesis: true difference in means is not equal to 0
 #95 percent confidence interval:
 # 0.05751134 0.20120697
@@ -135,10 +144,6 @@ as.factor(regfoc_groups)
 
 # x-Achse FALSE = prevention, TRUE = promotion
 
-library(ggplot2)
-library(plotrix)
-library(devtools)
-
 regfoc_groups %>%
   group_by(`REGFOC >= 3.125`) %>%
   summarise(Mean = mean(JC_SCEN2, na.rm = TRUE)-1, sem = std.error(JC_SCEN2))%>%
@@ -147,11 +152,11 @@ regfoc_groups %>%
   geom_bar(fill = "#0c4c8a") +
   geom_errorbar(width = 0.2) +
   scale_y_continuous(limits = c(0,5)) +
-  labs(x = "regulatorischer Fokus größer gleich 3.125", 
-       y = "Job Crafting bei schlechter Kommunikation", 
-       title = "title", 
-       subtitle = "subtitle", 
-       caption = "caption") +
+  labs(x = "regulatorischer Fokus", 
+       y = "Grad des Job Craftings bei schlechter Kommunikation", 
+       title = "Gewinnorientierte Personen haben bei schlechter Kommunikation \nein höheres Job Crafting als sicherheitsorientierte Personen.", 
+       subtitle = "Vergleich des regulatorischen Fokusses im Balkendiagramm (n=433)", 
+       caption = " ") +
  theme_minimal() +
 NULL
 
@@ -160,6 +165,32 @@ regfoc_groups %>%
   t.test(data = ., JC_SCEN2~`REGFOC >= 3.125`)
 
 
+# Hypothese 3 - unverbundener t-Test: Gewinnorientierte Personen suchen bei qualitativ hochwertiger Kommunikation
+# von organisatorischen Veränderungen eher nach Herausforderungen als nicht-gewinnorientierte Personen.
+t.test(filter(datensatz, REGFOC >= 3.125)$HERAUSF_JC_SCEN1,
+       filter(datensatz, REGFOC < 3.125)$HERAUSF_JC_SCEN1)
+
+# Bericht zu Hypothese 3: In der Stichprobe suchen gewinnorientierte Personen (M=4.29) bei qualitativ hochwertiger Kommunikation
+# von organisatorischen Veränderungen eher nach Herausforderungen als nicht-gewinnorientierte Personen (M=4.15).
+# Dieser Unterschied ist signifikant (t(190.9)=2.25, p < .05) und liegt 95& Sicherheit zwischen 0.017 und 0.257 Punkten
+# einer 6-stufigen Skala.
+
+# Visualisierung Hypothese 3:
+regfoc_groups %>%
+  group_by(`REGFOC >= 3.125`) %>%
+  summarise(Mean = mean(HERAUSF_JC_SCEN1, na.rm = TRUE)-1, sem = std.error(HERAUSF_JC_SCEN1)) %>%
+  ggplot() +
+  aes(x = `REGFOC >= 3.125`, weight = Mean, ymin = Mean - sem, ymax = Mean + sem) +
+  geom_bar(fill = "#0c4c8a") +
+  geom_errorbar(width = 0.2) +
+  scale_y_continuous(limits = c(0,5)) +
+  labs(x = "regulatorischer Fokus", 
+       y = "Grad des Job Craftings bei schlechter Kommunikation", 
+       title = "Gewinnorientierte Personen haben bei schlechter Kommunikation \nein höheres Job Crafting als sicherheitsorientierte Personen.", 
+       subtitle = "Vergleich des regulatorischen Fokusses im Balkendiagramm (n=433)", 
+       caption = " ") +
+  theme_minimal() +
+  NULL
 
 #HYPOTHESE 7 - Pearson Moment Korrelation
 cor(datensatz$REGFOC, datensatz$JC_SCEN1, method = "pearson")
@@ -177,3 +208,4 @@ labs(x= "regulatorischer Fokus", y= "Job Crafting", title= "keine signifikante K
 ggsave("Hypothese7.png")
 NULL 
 #optional: geom_jitter statt geom_point und coord_cartesian(xlim=c(1,6), ylim=c(1,6))
+
