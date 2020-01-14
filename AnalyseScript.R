@@ -215,7 +215,7 @@ cor.test(datensatz$REGFOC, datensatz$JC_SCEN2, method = "pearson")
 
 #Matrix
 jmv::corrMatrix(datensatz, c("REGFOC", "JC_SCEN2"))
-#Es gibt keinen signifikanten Zusammenhng zwischen dem regulatorischen Fokus und dem Job Crafting bei qualitativ minderwertiger Kommunikation von Veränderungen in einem Unternehmen ($\r=0.092, $p=0.055$). 
+#Es gibt keinen signifikanten Zusammenhang zwischen dem regulatorischen Fokus und dem Job Crafting bei qualitativ minderwertiger Kommunikation von Veränderungen in einem Unternehmen ($\r=0.092$, $p=0.055$). 
 
 #Visualisierung Hypothese 6
 datensatz %>%
@@ -226,37 +226,21 @@ ggsave("Hypothese6.png")
 
 #HYPOTHESE 8 - Pearson Moment Korrelation
 
-#Problem: Im Datensatz sind die einzelnen Fragen der Szenarien nicht enthalten (nur allgemein gefasst), müsste auf raw_short zurückgreifen und beide Fragen einzeln betrachten. 
-#Matrix funktioniert nicht, Visualisierung ebenfalls nicht.
+cor(datensatz$REGFOC, datensatz$HILFE_JC_SCEN2, method = "pearson")
+cor.test(datensatz$REGFOC, datensatz$HILFE_JC_SCEN2, method = "pearson")         
 
-#Erstellung einer 'Gruppe' der beiden Fragen als Hilfestellung 
-hilfestellung <- raw_short %>% select(jc_scen2_question_1, jc_scen2_question_2)
-
-#Zusammenhang von regulatorischem Fokus und Nachfrage bei Kollegen
-cor(datensatz$REGFOC, raw_short$jc_scen2_question_1, method = "pearson")
-cor.test(datensatz$REGFOC, hilfestellung$jc_scen2_question_1, method = "pearson")
-
-#Zusammenhang von regulatorischem Fokus und Nachfrage beim Arbeitgebern
-cor(datensatz$REGFOC, raw_short$jc_scen2_question_2, method = "pearson")
-cor.test(datensatz$REGFOC, hilfestellung$jc_scen2_question_2, method = "pearson")
-
-#Matrix
-jmv::corrMatrix(datensatz, c("REGFOC"), raw_short, c("hilfestellung"))
+#Matrix   
+jmv::corrMatrix(datensatz, c("REGFOC", "HILFE_JC_SCEN2"))
+#Es gibt keinen signifikanten Zusammenhang zwischen dem regulatorischen Fokus und der Suche nach Hilfestellung bei qualitativ minderwertiger Kommunikation von Veränderungen in einem Unternehmen ($\r= 0.048$, $p=0.318$)
 
 #Visualisierung Hypothese 8
 datensatz %>%
-  ggplot() + aes(x= REGFOC, y= jc_scen2_question_1) + 
-  geom_point(alpha=0.25) + geom_smooth(method = "lm") + 
-  labs(x = "regulatorischer Fokus", y = "Suche von Hilfe bei Kollegen")
+  ggplot() + aes(x = REGFOC, y= HILFE_JC_SCEN2) + 
+  geom_point(alpha=0.25) + geom_smooth(method = "lm") +
+  labs(x = "regulatorischer Fokus", y = "Suche nach Hilfestellung", title = "keine sig. Korrelation zw. reg. Fokus und Suche nach Hilfe")
+ggsave("Hypothese8.png")
 
-datensatz %>%
-  ggplot() + aes(x= REGFOC, y= jc_scen2_question_2) + 
-  geom_point(alpha=0.25) + geom_smooth(method = "lm") + 
-  labs(x = "regulatorischer Fokus", y = "Suche von Hilfe beim Vorgesetzten")
 
-             
-                
-                
-                
-                
+
+
                 
