@@ -209,3 +209,54 @@ ggsave("Hypothese7.png")
 NULL 
 #optional: geom_jitter statt geom_point und coord_cartesian(xlim=c(1,6), ylim=c(1,6))
 
+#HYPOTHESE 6 - Pearson Moment Korrelation
+cor(datensatz$REGFOC, datensatz$JC_SCEN2, method = "pearson")
+cor.test(datensatz$REGFOC, datensatz$JC_SCEN2, method = "pearson")
+
+#Matrix
+jmv::corrMatrix(datensatz, c("REGFOC", "JC_SCEN2"))
+#Es gibt keinen signifikanten Zusammenhng zwischen dem regulatorischen Fokus und dem Job Crafting bei qualitativ minderwertiger Kommunikation von Veränderungen in einem Unternehmen ($\r=0.092, $p=0.055$). 
+
+#Visualisierung Hypothese 6
+datensatz %>%
+ggplot() + aes(x= REGFOC, y= JC_SCEN2) + 
+geom_point(alpha=0.25) + geom_smooth(method = "lm") + 
+labs(x = "regulatorischer Fokus", y = "Job Crafting bei schlechter Kommunikation", title = "keine sig. Korrelation zw. reg. Fokus & JC bei schlechter Komm.")
+ggsave("Hypothese6.png")
+
+#HYPOTHESE 8 - Pearson Moment Korrelation
+
+#Problem: Im Datensatz sind die einzelnen Fragen der Szenarien nicht enthalten (nur allgemein gefasst), müsste auf raw_short zurückgreifen und beide Fragen einzeln betrachten. 
+#Matrix funktioniert nicht, Visualisierung ebenfalls nicht.
+
+#Erstellung einer 'Gruppe' der beiden Fragen als Hilfestellung 
+hilfestellung <- raw_short %>% select(jc_scen2_question_1, jc_scen2_question_2)
+
+#Zusammenhang von regulatorischem Fokus und Nachfrage bei Kollegen
+cor(datensatz$REGFOC, raw_short$jc_scen2_question_1, method = "pearson")
+cor.test(datensatz$REGFOC, hilfestellung$jc_scen2_question_1, method = "pearson")
+
+#Zusammenhang von regulatorischem Fokus und Nachfrage beim Arbeitgebern
+cor(datensatz$REGFOC, raw_short$jc_scen2_question_2, method = "pearson")
+cor.test(datensatz$REGFOC, hilfestellung$jc_scen2_question_2, method = "pearson")
+
+#Matrix
+jmv::corrMatrix(datensatz, c("REGFOC"), raw_short, c("hilfestellung"))
+
+#Visualisierung Hypothese 8
+datensatz %>%
+  ggplot() + aes(x= REGFOC, y= jc_scen2_question_1) + 
+  geom_point(alpha=0.25) + geom_smooth(method = "lm") + 
+  labs(x = "regulatorischer Fokus", y = "Suche von Hilfe bei Kollegen")
+
+datensatz %>%
+  ggplot() + aes(x= REGFOC, y= jc_scen2_question_2) + 
+  geom_point(alpha=0.25) + geom_smooth(method = "lm") + 
+  labs(x = "regulatorischer Fokus", y = "Suche von Hilfe beim Vorgesetzten")
+
+             
+                
+                
+                
+                
+                
