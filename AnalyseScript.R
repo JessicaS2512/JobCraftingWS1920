@@ -120,6 +120,13 @@ datensatz <- datensatz %>%
 saveRDS(datensatz, "data/datensatz.rds")
 # Statistische Analyse und Grafiken:----
 
+# Deskriptive Statistik zum Alter und Geschlecht:
+datensatz %>% select(age, gender) %>% psych::describe()
+
+#            n      mean      sd     median   min   max   range    se
+#age        399     31.01   12.95     25       18    81     63    0.65
+#gender     399     1.62     0.49      2        1    3      2     0.02
+
 # Histogramm zur Altersverteilung:
 datensatz %>%
   select(age) %>%
@@ -129,12 +136,12 @@ datensatz %>%
   labs(x = "Alter in Jahren", 
        y = "Häufigkeit", 
        title = "Junge, leicht bimodal verteilte Stichprobe", 
-       subtitle = "Histogramm zur Altersverteilung (n=433)", 
+       subtitle = "Histogramm zur Altersverteilung (n=399)", 
        caption = "binwidth = 1") +
   theme_minimal() +
   NULL
 
-# Histogramm zur Geschlechtsverteilung
+# Histogramm zur Geschlechtsverteilung:
 datensatz %>%
   filter(gender != 3) %>%
   select(gender) %>%
@@ -144,7 +151,7 @@ datensatz %>%
   labs(x = "Geschlecht", 
        y = "Häufigkeit", 
        title = "Überwiegend weibliche Stichprobe", 
-       subtitle = "Histogramm zur Geschlechterverteilung (n=433)", 
+       subtitle = "Histogramm zur Geschlechterverteilung (n=399)", 
        caption =(" ")) +
   theme_minimal() +
   NULL
