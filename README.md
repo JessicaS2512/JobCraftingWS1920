@@ -93,7 +93,7 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **H0**: Die Tätigkeit wirkt sich nicht auf das Job Crafting aus.  
 **H1**: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.  
 **Testverfahren**: Anova  
-**UV**: Tätigkeit  
+**UV**: Tätigkeit (Schüler, Student, Auszubildender, Angestellter, Selbstständiger, Rentner, Arbeitssuchender)
 **AV**: Grad des Job Craftings  
 
 **Zusammenhangshypothesen**
