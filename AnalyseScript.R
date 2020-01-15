@@ -28,7 +28,7 @@ names(raw)
 
 raw <- filter(raw, Status == "0")
 
-raw_short <- raw %>% select(gender, age, education, activity, regfoc_1, regfoc_2, regfoc_3, regfoc_4, regfoc_5, regfoc_6, regfoc_7, regfoc_8, jc_scen1_question_1, jc_scen1_question_2, jc_scen1_question_3, jc_scen1_question_4, jc_scen1_question_5, jc_scen1_question_6, jc_scen1_question_7, jc_scen1_question_8, jc_scen1_question_9, jc_scen2_question_1, jc_scen2_question_2, jc_scen2_question_3, jc_scen2_question_4, jc_scen2_question_5, jc_scen2_question_6, jc_scen2_question_7, jc_scen2_question_8, jc_scen2_question_9)
+raw_short <- raw %>% select(gender, age, education, activity, regfoc_1, regfoc_2, regfoc_3, regfoc_4, regfoc_5, regfoc_6, regfoc_7, jc_scen1_question_1, jc_scen1_question_2, jc_scen1_question_3, jc_scen1_question_4, jc_scen1_question_5, jc_scen1_question_6, jc_scen1_question_7, jc_scen1_question_8, jc_scen1_question_9, jc_scen2_question_1, jc_scen2_question_2, jc_scen2_question_3, jc_scen2_question_4, jc_scen2_question_5, jc_scen2_question_6, jc_scen2_question_7, jc_scen2_question_8, jc_scen2_question_9)
 
 raw_short$education <- ordered(raw_short$education, levels = c("Kein Schulabschluss", "Volks- oder Hauptschulabschluss", "Mittlere Reife/Realschulabschluss", "Fachhochschulreife/Fachabitur", "Allgemeine Hochschulreife/Abitur", "Abgeschlossene Berufsausbildung", "Bachelor", "Master", "Promotion", "Habilitation", "Keiner der hier genannten"))
 
@@ -41,7 +41,6 @@ raw_short$regfoc_4 <- as.numeric(raw_short$regfoc_4)
 raw_short$regfoc_5 <- as.numeric(raw_short$regfoc_5)
 raw_short$regfoc_6 <- as.numeric(raw_short$regfoc_6)
 raw_short$regfoc_7 <- as.numeric(raw_short$regfoc_7)
-raw_short$regfoc_8 <- as.numeric(raw_short$regfoc_8)
 
 raw_short$jc_scen1_question_1 <- as.numeric(raw_short$jc_scen1_question_1)
 raw_short$jc_scen1_question_2 <- as.numeric(raw_short$jc_scen1_question_2)
@@ -72,7 +71,6 @@ raw_short$regfoc_4 <- ordered(raw_short$regfoc_4, levels = scale.zustimmung)
 raw_short$regfoc_5 <- ordered(raw_short$regfoc_5, levels = scale.zustimmung)
 raw_short$regfoc_6 <- ordered(raw_short$regfoc_6, levels = scale.zustimmung)
 raw_short$regfoc_7 <- ordered(raw_short$regfoc_7, levels = scale.zustimmung)
-raw_short$regfoc_8 <- ordered(raw_short$regfoc_8, levels = scale.zustimmung)
 
 raw_short$jc_scen1_question_1 <- ordered(raw_short$jc_scen1_question_1, levels = scale.zustimmung)
 raw_short$jc_scen1_question_2 <- ordered(raw_short$jc_scen1_question_2, levels = scale.zustimmung)
@@ -94,7 +92,7 @@ raw_short$jc_scen2_question_7 <- ordered(raw_short$jc_scen2_question_7, levels =
 raw_short$jc_scen2_question_8 <- ordered(raw_short$jc_scen2_question_8, levels = scale.zustimmung)
 raw_short$jc_scen2_question_9 <- ordered(raw_short$jc_scen2_question_9, levels = scale.zustimmung)
 
-schluesselliste <- list(REGFOC = c("-regfoc_1", "-regfoc_2", "-regfoc_3", "-regfoc_4", "regfoc_5", "regfoc_6", "regfoc_7", "regfoc_8"),
+schluesselliste <- list(REGFOC = c("-regfoc_1", "-regfoc_2", "-regfoc_3", "-regfoc_4", "regfoc_5", "regfoc_6", "regfoc_7"),
                         JC_SCEN1 = c("-jc_scen1_question_1", "-jc_scen1_question_2", "-jc_scen1_question_3", "-jc_scen1_question_4", "-jc_scen1_question_5", "-jc_scen1_question_6", "jc_scen1_question_7", "jc_scen1_question_8", "jc_scen1_question_9"),
                         JC_SCEN2 = c("-jc_scen2_question_1", "-jc_scen2_question_2", "-jc_scen2_question_3", "-jc_scen2_question_4", "-jc_scen2_question_5", "-jc_scen2_question_6", "jc_scen2_question_7", "jc_scen2_question_8", "jc_scen2_question_9"),
                         HILFE_JC_SCEN1 = c("-jc_scen1_question_1", "-jc_scen1_question_2", "-jc_scen1_question_3"),
@@ -102,7 +100,9 @@ schluesselliste <- list(REGFOC = c("-regfoc_1", "-regfoc_2", "-regfoc_3", "-regf
                         HERAUSF_JC_SCEN1 = c("-jc_scen1_question_4", "-jc_scen1_question_5", "-jc_scen1_question_6"),
                         HERAUSF_JC_SCEN2 = c("-jc_scen2_question_4", "-jc_scen2_question_5", "-jc_scen2_question_6"),
                         ANFORD_JC_SCNEN1 = c("jc_scen1_question_7", "jc_scen1_question_8", "jc_scen1_question_9"),
-                        ANFORD_JC_SCNEN2 = c("jc_scen2_question_7", "jc_scen2_question_8", "jc_scen2_question_9"))
+                        ANFORD_JC_SCNEN2 = c("jc_scen2_question_7", "jc_scen2_question_8", "jc_scen2_question_9"),
+                        PRO = c("-regfoc_1", "-regfoc_2", "-regfoc_3", "-regfoc_4"),
+                        PRE = c("-regfoc_5", "-regfoc_6", "-regfoc_7"))
 
 scoreItems(schluesselliste, raw_short)
 
