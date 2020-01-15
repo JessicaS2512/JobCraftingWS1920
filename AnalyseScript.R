@@ -194,7 +194,7 @@ regfoc_groups %>%
   geom_errorbar(width = 0.2) +
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "regulatorischer Fokus", 
-       y = "Grad des Job Craftings bei schlechter Kommunikation", 
+       y = "Grad des Job Craftings bei schlechter Kommunikation [0-5]", 
        title = "Gewinnorientierte Personen haben bei schlechter Kommunikation \nein höheres Job Crafting als sicherheitsorientierte Personen.", 
        subtitle = "Vergleich des regulatorischen Fokusses im Balkendiagramm (n=433)", 
        caption = " ") +
@@ -235,7 +235,7 @@ regfoc_groups %>%
   geom_errorbar(width = 0.2) +
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "regulatorischer Fokus",
-       y = "Grad des Job Craftings bei schlechter Kommunikation",
+       y = "Grad des Job Craftings bei schlechter Kommunikation [0-5]",
        title = "Gewinnorientierte Personen haben bei schlechter Kommunikation \nein höheres Job Crafting als sicherheitsorientierte Personen.",
        subtitle = "Vergleich des regulatorischen Fokusses im Balkendiagramm (n=433)",
        caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
