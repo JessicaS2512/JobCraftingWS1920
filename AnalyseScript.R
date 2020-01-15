@@ -2,6 +2,7 @@
 ## Teamname: Job Crafting
 
 # Pakete laden: ----
+knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 source("data/qualtricshelpers.R") 
 library(psych)
@@ -10,6 +11,10 @@ library(jmv)
 library(devtools)
 library(plotrix)
 library(ggthemes)
+
+devtools::install_github("HCIC/r-tools")
+
+rwthfarben <- hcictools::rwth.colorpalette()
 # Rohdaten laden: ----
 raw <- read_csv("job_crafting.csv")
 
@@ -115,6 +120,35 @@ datensatz <- datensatz %>%
 saveRDS(datensatz, "data/datensatz.rds")
 # Statistische Analyse und Grafiken:----
 
+# Histogramm zur Altersverteilung:
+datensatz %>%
+  select(age) %>%
+  ggplot() +
+  aes(x= age) +
+  geom_histogram(binwidth = 1) +
+  labs(x = "Alter in Jahren", 
+       y = "Häufigkeit", 
+       title = "Junge, leicht bimodal verteilte Stichprobe", 
+       subtitle = "Histogramm zur Altersverteilung (n=433)", 
+       caption = "binwidth = 1") +
+  theme_minimal() +
+  NULL
+
+# Histogramm zur Geschlechtsverteilung
+datensatz %>%
+  filter(gender != 3) %>%
+  select(gender) %>%
+  ggplot() +
+  aes(x= gender) +
+  geom_histogram(bins = 2) +
+  labs(x = "Geschlecht", 
+       y = "Häufigkeit", 
+       title = "Überwiegend weibliche Stichprobe", 
+       subtitle = "Histogramm zur Geschlechterverteilung (n=433)", 
+       caption =(" ")) +
+  theme_minimal() +
+  NULL
+
 # Errechnen des Medians, um den regulatorischen Fokus in zwei Gruppen (prevention/promotion) aufzuteilen
 median(datensatz$REGFOC)
 
@@ -164,6 +198,14 @@ NULL
 regfoc_groups %>%
   t.test(data = ., JC_SCEN2~`REGFOC >= 3.125`)
 
+#Hypothese 2 - Gewinnorientierte Personen haben bei qualitativ hochwertiger Kommunikation von 
+# organisatorischen Veränderungen höheres Job Crafting als nicht-gewinnorientierte Personen.
+t.test(filter(datensatz, REGFOC >= 3.125)$JC_SCEN1,
+       filter(datensatz, REGFOC < 3.125)$JC_SCEN1)
+
+# Bericht zu Hypothese 2: In der Stichprobe konnte kein signifikanter Unterschied im Job Crafting bei 
+# qualitativ hochwetiger Kommunikation von organisatorischen Veränderungen zwischen gewinnorientierten (M=3.77) und 
+# nicht-gewinnorientierten Personen (M=3.7) festgestellt werden (p > 0.05).
 
 # Hypothese 3 - unverbundener t-Test: Gewinnorientierte Personen suchen bei qualitativ hochwertiger Kommunikation
 # von organisatorischen Veränderungen eher nach Herausforderungen als nicht-gewinnorientierte Personen.
@@ -176,20 +218,21 @@ t.test(filter(datensatz, REGFOC >= 3.125)$HERAUSF_JC_SCEN1,
 # zwischen 0.017 und 0.257 Punkten einer 6-stufigen Skala.
 
 # Visualisierung Hypothese 3:
-regfoc_groups %>%
+
+regfoc_groups %>% 
   group_by(`REGFOC >= 3.125`) %>%
-  summarise(Mean = mean(HERAUSF_JC_SCEN1, na.rm = TRUE)-1, sem = std.error(HERAUSF_JC_SCEN1)) %>%
+  summarise(Mean = mean(HERAUSF_JC_SCEN1, na.rm = TRUE)-1, sem = std.error(HERAUSF_JC_SCEN1)) %>% 
   ggplot() +
-  aes(x = `REGFOC >= 3.125`, weight = Mean, ymin = Mean - sem, ymax = Mean + sem) +
-  geom_bar(fill = "#0c4c8a") +
+  aes(x = `REGFOC >= 3.125`, weight = Mean, ymin = Mean - sem , ymax = Mean + sem, fill = `REGFOC >= 3.125`) +
+  geom_bar(fill = c(rwthfarben$lightblue, rwthfarben$red), width = 0.4) +
   geom_errorbar(width = 0.2) +
   scale_y_continuous(limits = c(0,5)) +
-  labs(x = "regulatorischer Fokus", 
-       y = "Grad des Job Craftings bei schlechter Kommunikation", 
-       title = "Gewinnorientierte Personen haben bei schlechter Kommunikation \nein höheres Job Crafting als sicherheitsorientierte Personen.", 
-       subtitle = "Vergleich des regulatorischen Fokusses im Balkendiagramm (n=433)", 
-       caption = " ") +
-  theme_minimal() +
+  labs(x = "regulatorischer Fokus",
+       y = "Grad des Job Craftings bei schlechter Kommunikation",
+       title = "Gewinnorientierte Personen haben bei schlechter Kommunikation \nein höheres Job Crafting als sicherheitsorientierte Personen.",
+       subtitle = "Vergleich des regulatorischen Fokusses im Balkendiagramm (n=433)",
+       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
+  theme_linedraw() +
   NULL
 
 #HYPOTHESE 7 - Pearson Moment Korrelation
