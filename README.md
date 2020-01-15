@@ -93,7 +93,7 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **H0**: Die Tätigkeit wirkt sich nicht auf das Job Crafting aus.  
 **H1**: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.  
 **Testverfahren**: Anova  
-**UV**: Tätigkeit (Schüler, Student, Auszubildender, Angestellter, Selbstständiger, Rentner, Arbeitssuchender)
+**UV**: Tätigkeit (Schüler, Student, Auszubildender, Angestellter, Selbstständiger, Rentner, Arbeitssuchender)  
 **AV**: Grad des Job Craftings  
 
 **Zusammenhangshypothesen**
@@ -111,9 +111,9 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **Testverfahren**: Korrelation (Pearson)
 
 9. Hypothese: Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen ist abhängig von regulatorischem Fokus, Alter und Berufsstand.  
-**H0**:  
+**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von dem regulatorischen Fokus, Alter und Berufsstand.  
 **Testverfahren**: lineare Regression
 
 10. Hypothese: Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen ist abhängig von regulatorischem Fokus, Alter und Berufsstand.  
-**H0**:  
+**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ hochweriger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von dem regulatorischen Fokus, Alter und Berufsstand.  
 **Testverfahren**: lineare Regression
