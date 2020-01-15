@@ -60,33 +60,33 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 
 **Unterschiedshypothesen**
 
-1. Hypothese: Sicherheitsorientierte Personen haben bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als nicht-sicherheitsorientierte Personen.  
-**H0**: Bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
-**H1**: Bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
+1. Hypothese: Sicherheitsorientierte Personen haben bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als gewinnorientierte Personen.  
+**H0**: Bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und gewinnorientierten Personen.  
+**H1**: Bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und gewinnorientierten Personen.  
 **Testverfahren**: t-Test für unverbundene Stichproben  
-**UV**: regulatorischer Fokus (sicherheitsorientiert vs. nicht-sicherheitsorientiert)  
+**UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
 **AV**: Grad des Job Craftings
 
 
-2. Hypothese: Gewinnorientierte Personen haben bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als nicht-gewinnorientierte Personen.   
-**H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinnorientierten und nicht-gewinnorientierten Personen.  
-**H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinnorientierten und nicht-gewinnorientierten Personen.  
+2. Hypothese: Gewinnorientierte Personen haben bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als sicherheitsorientierte Personen.   
+**H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinnorientierten und sicherheitsorientierten Personen.  
+**H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinnorientierten und sicherheitsorientierten Personen.  
 **Testverfahren**: t-Test für unverbundene Stichproben  
-**UV**: regulatorischer Fokus (gewinnorientiert vs. nicht-gewinnorientiert)  
+**UV**: regulatorischer Fokus (gewinnorientiert vs. sicherheitsorientiert)  
 **AV**: Grad des Job Craftings
 
-3. Hypothese: Gewinnorientierte Personen suchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als nicht-gewinnorientierte Personen.  
+3. Hypothese: Gewinnorientierte Personen suchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als sicherheitsorientierte Personen.  
 **H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.  
 **H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.  
 **Testverfahren**: t-Test für unverbundene Stichproben  
-**UV**: regulatorischer Fokus (gewinnorientiert vs. nicht-gewinnorientiert)  
+**UV**: regulatorischer Fokus (gewinnorientiert vs. sicherheitsorientiert)  
 **AV**: Suche nach Herausforderungen
 
-4. Hypothese: Sicherheitsorientierte Personen versuchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher Anforderungen zu reduzieren als nicht-sicherheitsorientierte Personen.  
-**H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
-**H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und nicht-sicherheitsorientierten Personen.  
+4. Hypothese: Sicherheitsorientierte Personen versuchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher Anforderungen zu reduzieren als gewinnorientierte Personen.  
+**H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und gewinnorientierten Personen.  
+**H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und gewinnorientierten Personen.  
 **Testverfahren**: t-Test für unverbundene Stichproben  
-**UV**: regulatorischer Fokus (sicherheitsorientiert vs. nicht-sicherheitsorientiert)  
+**UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
 **AV**: Reduktion von Anforderungen
 
 5. Hypothese: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.   
@@ -94,7 +94,7 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **H1**: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.  
 **Testverfahren**: Anova  
 **UV**: Tätigkeit  
-**AV**: Job Crafting / Grad des Job Craftings  
+**AV**: Grad des Job Craftings  
 
 **Zusammenhangshypothesen**
 
