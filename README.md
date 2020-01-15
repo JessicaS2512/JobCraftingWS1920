@@ -68,8 +68,14 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **AV**: Grad des Job Craftings
 * Feedback: Vorsicht! Promotion und Prevention sind keine Gegenteile. Für diese Hypothese würde ich einen Mediansplit auf Prevention anwenden, also sicherheitsorientierte vs. nicht-sicherheitsorientierte. Ganz grundsätzlich fahren Sie glaube ich bei Ihren Hypothesen 1-4 mit zweifaktorieller ANOVA am besten. UV1: PRO+/PRO- UV2: PRE+/PRE-
 
+NEU 1. Hypothese: Das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
+**H0**: Das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
+**Testverfahren**: zweifaktorielle ANOVA  
+**UV1**: promotion focus vs. kein promotion focus  
+**UV2**: prevention focus vs. kein prevention focus  
+**AV**: Grad des Job Craftings
 
-2. Hypothese: Gewinnorientierte Personen haben bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als sicherheitsorientierte Personen.   
+2. Hypothese: Gewinnorientierte Personen haben bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als sicherheitsorientierte Personen.  
 **H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinnorientierten und sicherheitsorientierten Personen.  
 **H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinnorientierten und sicherheitsorientierten Personen.  
 **Testverfahren**: t-Test für unverbundene Stichproben  
@@ -77,14 +83,27 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **AV**: Grad des Job Craftings
 * Feedback: Same here. Besser Mediansplit auf Promotion oder ANOVA (s.o.)
 
+NEU 2 . Hypothese: Das Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
+**H0**: Das Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
+**Testverfahren**: zweifaktorielle ANOVA  
+**UV1**: promotion focus vs. kein promotion focus  
+**UV2**: prevention focus vs. kein prevention focus  
+**AV**: Grad des Job Craftings
+
 3. Hypothese: Gewinnorientierte Personen suchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als sicherheitsorientierte Personen.  
-**H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.  
-**H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.  
+**H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.
+**H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.
 **Testverfahren**: t-Test für unverbundene Stichproben  
 **UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
 **AV**: Suche nach Herausforderungen
 * Feedback: Same here. Besser Mediansplit auf Promotion oder ANOVA (s.o.)
 
+NEU 3. Hypothese: Der Grad der Suche nach Herausforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
+**H0**: Der Grad der Suche nach Herausforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
+**Testverfahren**: zweifaktorielle ANOVA  
+**UV1**: promotion focus vs. kein promotion focus  
+**UV2**: prevention focus vs. kein prevention focus  
+**AV**: Grad der Suche nach Herausforderungen
 
 4. Hypothese: Sicherheitsorientierte Personen versuchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher Anforderungen zu reduzieren als gewinnorientierte Personen.  
 **H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und gewinnorientierten Personen.  
@@ -94,11 +113,17 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **AV**: Reduktion von Anforderungen
 * Feedback: Same here. Besser Mediansplit auf Prevention oder ANOVA (s.o.)
 
+NEU 4. Hypothese: Der Grad der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
+**H0**: Der Grad der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
+**Testverfahren**: zweifaktorielle ANOVA  
+**UV1**: promotion focus vs. kein promotion focus  
+**UV2**: prevention focus vs. kein prevention focus  
+**AV**: Grad der Reduktion von Anforderungen
 
 5. Hypothese: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.   
 **H0**: Die Tätigkeit wirkt sich nicht auf das Job Crafting aus.  
 **H1**: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.  
-**Testverfahren**: Anova  
+**Testverfahren**: ANOVA  
 **UV**: Tätigkeit (Schüler, Student, Auszubildender, Angestellter, Selbstständiger, Rentner, Arbeitssuchender)  
 **AV**: Grad des Job Craftings  
 * Feedback: Super! Einfaktorielle ANOVA. 
