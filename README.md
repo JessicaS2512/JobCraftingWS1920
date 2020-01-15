@@ -66,6 +66,7 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **Testverfahren**: t-Test für unverbundene Stichproben  
 **UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
 **AV**: Grad des Job Craftings
+* Feedback: Vorsicht! Promotion und Prevention sind keine Gegenteile. Für diese Hypothese würde ich einen Mediansplit auf Prevention anwenden, also sicherheitsorientierte vs. nicht-sicherheitsorientierte. Ganz grundsätzlich fahren Sie glaube ich bei Ihren Hypothesen 1-4 mit zweifaktorieller ANOVA am besten. UV1: PRO+/PRO- UV2: PRE+/PRE-
 
 
 2. Hypothese: Gewinnorientierte Personen haben bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als sicherheitsorientierte Personen.   
@@ -74,6 +75,7 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **Testverfahren**: t-Test für unverbundene Stichproben  
 **UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
 **AV**: Grad des Job Craftings
+* Feedback: Same here. Besser Mediansplit auf Promotion oder ANOVA (s.o.)
 
 3. Hypothese: Gewinnorientierte Personen suchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als sicherheitsorientierte Personen.  
 **H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.  
@@ -81,6 +83,8 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **Testverfahren**: t-Test für unverbundene Stichproben  
 **UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
 **AV**: Suche nach Herausforderungen
+* Feedback: Same here. Besser Mediansplit auf Promotion oder ANOVA (s.o.)
+
 
 4. Hypothese: Sicherheitsorientierte Personen versuchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher Anforderungen zu reduzieren als gewinnorientierte Personen.  
 **H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und gewinnorientierten Personen.  
@@ -88,6 +92,8 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **Testverfahren**: t-Test für unverbundene Stichproben  
 **UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
 **AV**: Reduktion von Anforderungen
+* Feedback: Same here. Besser Mediansplit auf Prevention oder ANOVA (s.o.)
+
 
 5. Hypothese: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.   
 **H0**: Die Tätigkeit wirkt sich nicht auf das Job Crafting aus.  
@@ -95,6 +101,7 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **Testverfahren**: Anova  
 **UV**: Tätigkeit (Schüler, Student, Auszubildender, Angestellter, Selbstständiger, Rentner, Arbeitssuchender)  
 **AV**: Grad des Job Craftings  
+* Feedback: Super! Einfaktorielle ANOVA. 
 
 **Zusammenhangshypothesen**
 
