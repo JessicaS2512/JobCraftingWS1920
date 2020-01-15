@@ -206,21 +206,21 @@ regfoc_groups %>%
   t.test(data = ., JC_SCEN2~`REGFOC >= 3.125`)
 
 #Hypothese 2 - Gewinnorientierte Personen haben bei qualitativ hochwertiger Kommunikation von 
-# organisatorischen Veränderungen höheres Job Crafting als nicht-gewinnorientierte Personen.
+# organisatorischen Veränderungen höheres Job Crafting als sicherheitsorientierte Personen.
 t.test(filter(datensatz, REGFOC >= 3.125)$JC_SCEN1,
        filter(datensatz, REGFOC < 3.125)$JC_SCEN1)
 
 # Bericht zu Hypothese 2: In der Stichprobe konnte kein signifikanter Unterschied im Job Crafting bei 
 # qualitativ hochwetiger Kommunikation von organisatorischen Veränderungen zwischen gewinnorientierten (M=3.77) und 
-# nicht-gewinnorientierten Personen (M=3.7) festgestellt werden (p > 0.05).
+# sicherheitsorientierten Personen (M=3.7) festgestellt werden (p > 0.05).
 
 # Hypothese 3 - unverbundener t-Test: Gewinnorientierte Personen suchen bei qualitativ hochwertiger Kommunikation
-# von organisatorischen Veränderungen eher nach Herausforderungen als nicht-gewinnorientierte Personen.
+# von organisatorischen Veränderungen eher nach Herausforderungen als sicherheitsorientierte Personen.
 t.test(filter(datensatz, REGFOC >= 3.125)$HERAUSF_JC_SCEN1,
        filter(datensatz, REGFOC < 3.125)$HERAUSF_JC_SCEN1)
 
 # Bericht zu Hypothese 3: In der Stichprobe suchen gewinnorientierte Personen (M=4.29) bei qualitativ hochwertiger
-# Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als nicht-gewinnorientierte
+# Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als sicherheitsorientierte
 # Personen (M=4.15). Dieser Unterschied ist signifikant (t(190.9)=2.25, p < .05) und liegt mit 95%iger Sicherheit
 # zwischen 0.017 und 0.257 Punkten einer 6-stufigen Skala.
 
