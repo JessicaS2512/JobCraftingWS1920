@@ -162,6 +162,7 @@ datensatz %>%
 
 <<<<<<< HEAD
 # Hypothese 1
+# Formulierung: Prevention focussed Menschen haben mehr Job Crafting bei schlechter Kommunikation als nicht-prevention focussed Menschen
 library(questionr)
 
 ## Cutting datensatz$PRO into datensatz$PRO_mediansplit
@@ -171,28 +172,18 @@ datensatz$PRO_mediansplit <- cut(datensatz$PRO, include.lowest=TRUE,  right=TRUE
 datensatz$PRE_mediansplit <- cut(datensatz$PRE, include.lowest=TRUE,  right=TRUE,
                                  breaks=c(1, 5.66666666666667, 6))
 
-res2 <- ANOVA(datensatz, dep = "JC_SCEN2", factors = c("PRE_mediansplit", "PRO_mediansplit"),
-             emMeans = list(c("PRE_mediansplit", "PRO_mediansplit")))
-res2$main
+ANOVA(datensatz, dep = "JC_SCEN2", factors ="PRE_mediansplit", 
+      postHoc = JC_SCEN2 ~ PRE_mediansplit)
 
-res2$emm
-
-datnsatz%>%
-  group_by(PRO_mediansplit, PRE_mediansplit) 
-  ggplot()+
-    aes(x = PRO_mediansplit)
-
-
-# nicht signifikant. Job Crafting bei qualitativ minderwertiger Kommunikation ist nicht abhängig vom prevention focus und vom promotion focus.
+# der mittlere Unterschied von -0.124 ist signifikant
 
 #  Hypothese 2
 
-res <- ANOVA(datensatz, dep = "JC_SCEN1", factors = c("PRE_mediansplit", "PRO_mediansplit"),
-        emMeans = list(c("PRE_mediansplit", "PRO_mediansplit")))
-res$main
+ANOVA(datensatz, dep = "JC_SCEN1", factors ="PRO_mediansplit", 
+      postHoc = JC_SCEN1 ~ PRO_mediansplit)
 
-res$emm
-# signifikant. Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von prevention focus und promotion focus.
+# ANOVA Tabelle sagt uns: verwirf die Hypothese H0 (signifikant)
+# der mittlere Unterschied von -0.149 ist signifikant. Promotion focussed und nicht promotion-focussed unterscheiden sich im Job Crafting bei schlechter Kommunikation (Unterschied M = -0.149)
 =======
 # Hypothese 6: Je höher der prevention Fokus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation
 # von organisatorischen Veränderungen in einem Unternehmen.
