@@ -211,5 +211,4 @@ datensatz %>%
 
 # Bericht Hypothese 7: Es gibt einen signifikanten Zusammenhang zwischen dem Promotion focus und dem Job Crafting bei
 # qualitativ hochwertiger Kommunikation ($r = 0.216$, $p<.001$). Das bedeutet: Je höher der Promotion focus, desto 
-# höher das Job Crafting bei qualitativ hochwertiger Kommunikation. 
 # höher das Job Crafting bei qualitativ hochwertiger Kommunikation.
