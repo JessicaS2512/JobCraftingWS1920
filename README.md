@@ -60,14 +60,12 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 
 **Unterschiedshypothesen**
 
-
-1. Hypothese: Das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  **H0**: Das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
+1. Hypothese: Prevention focussed Menschen haben mehr Job Crafting bei schlechter Kommunikation als nicht-prevention focussed Menschen  
+**H0**: Das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
 **Testverfahren**: zweifaktorielle ANOVA  
 **UV1**: promotion focus vs. kein promotion focus  
 **UV2**: prevention focus vs. kein prevention focus  
 **AV**: Grad des Job Craftings
-
-
 
 2. Hypothese: Das Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
 **H0**: Das Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
@@ -76,16 +74,12 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **UV2**: prevention focus vs. kein prevention focus  
 **AV**: Grad des Job Craftings
 
-
-
 3. Hypothese: Der Grad der Suche nach Herausforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
 **H0**: Der Grad der Suche nach Herausforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
 **Testverfahren**: zweifaktorielle ANOVA  
 **UV1**: promotion focus vs. kein promotion focus  
 **UV2**: prevention focus vs. kein prevention focus  
 **AV**: Grad der Suche nach Herausforderungen
-
-
 
 4. Hypothese: Der Grad der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
 **H0**: Der Grad der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
@@ -100,7 +94,6 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 **Testverfahren**: ANOVA  
 **UV**: Tätigkeit (Schüler, Student, Auszubildender, Angestellter, Selbstständiger, Rentner, Arbeitssuchender)  
 **AV**: Grad des Job Craftings  
-* Feedback: Super! Einfaktorielle ANOVA. 
 
 **Zusammenhangshypothesen**
 
