@@ -2,7 +2,7 @@
 ## JobCraftingWS1920
 
 
-**1. Teammitglieder:** Caroline Kreiß, Jennifer Schnier, Isabel Grevenstein, Maike Holle, Jessica Schmitz, Anna Abel
+**1. Teammitglieder:** Caroline Kreiß, Jennifer Schnier, Isabel Grevenstein, Maike Holle, Jessica Schmitz
 
 **2. Unser Fokus:** 
 
