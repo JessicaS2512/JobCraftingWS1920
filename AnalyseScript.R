@@ -11,6 +11,7 @@ library(jmv)
 library(devtools)
 library(plotrix)
 library(ggthemes)
+library(questionr)
 
 devtools::install_github("HCIC/r-tools")
 
@@ -162,7 +163,6 @@ datensatz %>%
 
 # Hypothese 1
 # Formulierung: Prevention focussed Menschen haben mehr Job Crafting bei schlechter Kommunikation als nicht-prevention focussed Menschen
-library(questionr)
 
 ## Cutting datensatz$PRO into datensatz$PRO_mediansplit
 datensatz$PRO_mediansplit <- cut(datensatz$PRO, include.lowest=TRUE,  right=TRUE,
