@@ -60,60 +60,34 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 
 **Unterschiedshypothesen**
 
-1. Hypothese: Sicherheitsorientierte Personen haben bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als gewinnorientierte Personen.  
-**H0**: Bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und gewinnorientierten Personen.  
-**H1**: Bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von sicherheitsorientierten und gewinnorientierten Personen.  
-**Testverfahren**: t-Test für unverbundene Stichproben  
-**UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
-**AV**: Grad des Job Craftings
-* Feedback: Vorsicht! Promotion und Prevention sind keine Gegenteile. Für diese Hypothese würde ich einen Mediansplit auf Prevention anwenden, also sicherheitsorientierte vs. nicht-sicherheitsorientierte. Ganz grundsätzlich fahren Sie glaube ich bei Ihren Hypothesen 1-4 mit zweifaktorieller ANOVA am besten. UV1: PRO+/PRO- UV2: PRE+/PRE-
 
-NEU 1. Hypothese: Das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
-**H0**: Das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
+1. Hypothese: Das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  **H0**: Das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
 **Testverfahren**: zweifaktorielle ANOVA  
 **UV1**: promotion focus vs. kein promotion focus  
 **UV2**: prevention focus vs. kein prevention focus  
 **AV**: Grad des Job Craftings
 
-2. Hypothese: Gewinnorientierte Personen haben bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen höheres Job Crafting als sicherheitsorientierte Personen.  
-**H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied zwischen dem Job Crafting von gewinnorientierten und sicherheitsorientierten Personen.  
-**H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied zwischen dem Job Crafting von gewinnorientierten und sicherheitsorientierten Personen.  
-**Testverfahren**: t-Test für unverbundene Stichproben  
-**UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
-**AV**: Grad des Job Craftings
-* Feedback: Same here. Besser Mediansplit auf Promotion oder ANOVA (s.o.)
 
-NEU 2 . Hypothese: Das Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
+
+2. Hypothese: Das Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
 **H0**: Das Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
 **Testverfahren**: zweifaktorielle ANOVA  
 **UV1**: promotion focus vs. kein promotion focus  
 **UV2**: prevention focus vs. kein prevention focus  
 **AV**: Grad des Job Craftings
 
-3. Hypothese: Gewinnorientierte Personen suchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als sicherheitsorientierte Personen.  
-**H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.
-**H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Suche nach Herausforderungen zwischen gewinn- und sicherheitsorientierten Personen.
-**Testverfahren**: t-Test für unverbundene Stichproben  
-**UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
-**AV**: Suche nach Herausforderungen
-* Feedback: Same here. Besser Mediansplit auf Promotion oder ANOVA (s.o.)
 
-NEU 3. Hypothese: Der Grad der Suche nach Herausforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
+
+3. Hypothese: Der Grad der Suche nach Herausforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
 **H0**: Der Grad der Suche nach Herausforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
 **Testverfahren**: zweifaktorielle ANOVA  
 **UV1**: promotion focus vs. kein promotion focus  
 **UV2**: prevention focus vs. kein prevention focus  
 **AV**: Grad der Suche nach Herausforderungen
 
-4. Hypothese: Sicherheitsorientierte Personen versuchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher Anforderungen zu reduzieren als gewinnorientierte Personen.  
-**H0**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es keinen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und gewinnorientierten Personen.  
-**H1**: Bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen gibt es einen Unterschied bei der Reduktion der Anforderungen zwischen sicherheitsorientierten und gewinnorientierten Personen.  
-**Testverfahren**: t-Test für unverbundene Stichproben  
-**UV**: regulatorischer Fokus (sicherheitsorientiert vs. gewinnorientiert)  
-**AV**: Reduktion von Anforderungen
-* Feedback: Same here. Besser Mediansplit auf Prevention oder ANOVA (s.o.)
 
-NEU 4. Hypothese: Der Grad der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
+
+4. Hypothese: Der Grad der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von dem promotion focus und dem prevention focus.  
 **H0**: Der Grad der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist unabhängig von dem promotion focus und dem prevention focus.  
 **Testverfahren**: zweifaktorielle ANOVA  
 **UV1**: promotion focus vs. kein promotion focus  
@@ -130,22 +104,22 @@ NEU 4. Hypothese: Der Grad der Reduktion von Anforderungen bei qualitativ hochwe
 
 **Zusammenhangshypothesen**
 
-6. Hypothese: Je niedriger der regulatorische Fokus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H0**: Es gibt keinen Zusammenhang zwischen regulatorischem Fokus und Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+6. Hypothese: Je höher der prevention Fokus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+**H0**: Es gibt keinen Zusammenhang zwischen prevention Fokus und Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
 **Testverfahren**: Korrelation (Pearson)
 
-7. Hypothese: Je höher der regulatorische Fokus, desto höher ist das Job Crafting bei qualitativ hochwertiger Kommunikation von Veränderungen in einem Unternehmen.  
-**H0**: Es gibt keinen Zusammenhang zwischen regulatorischem Fokus und Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+7. Hypothese: Je höher der promotion Fokus, desto höher ist das Job Crafting bei qualitativ hochwertiger Kommunikation von Veränderungen in einem Unternehmen.  
+**H0**: Es gibt keinen Zusammenhang zwischen promotion Fokus und Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
 **Testverfahren**: Korrelation (Pearson)
 
-8. Hypothese: Je niedriger der regulatorische Fokus, desto eher sucht man nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H0**: Es gibt keinen Zusammenhang zwischen regulatorischem Fokus und der Suche nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+8. Hypothese: Je höher der prevention Fokus, desto eher sucht man nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+**H0**: Es gibt keinen Zusammenhang zwischen prevention Fokus und der Suche nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
 **Testverfahren**: Korrelation (Pearson)
 
-9. Hypothese: Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen ist abhängig von regulatorischem Fokus, Alter und Berufsstand.  
-**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von dem regulatorischen Fokus, Alter und Berufsstand.  
+9. Hypothese: Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen ist abhängig von prevention Fokus und promotion Fokus.
+**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von prevention Fokus und promotion Fokus.
 **Testverfahren**: lineare Regression
 
-10. Hypothese: Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen ist abhängig von regulatorischem Fokus, Alter und Berufsstand.  
-**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ hochweriger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von dem regulatorischen Fokus, Alter und Berufsstand.  
+10. Hypothese: Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen ist abhängig von prevention Fokus und promotion Fokus.
+**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ hochweriger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von dem prevention Fokus und dem promotion Fokus.
 **Testverfahren**: lineare Regression
