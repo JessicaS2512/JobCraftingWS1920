@@ -157,5 +157,38 @@ datensatz %>%
        subtitle = "Histogramm zur Geschlechterverteilung (n=399)", 
        caption =(" ")) +
   theme_minimal() +
+
   NULL
 
+# Hypothese 1
+library(questionr)
+
+## Cutting datensatz$PRO into datensatz$PRO_mediansplit
+datensatz$PRO_mediansplit <- cut(datensatz$PRO, include.lowest=TRUE,  right=TRUE,
+                                 breaks=c(1.25, 4.75, 6))
+## Cutting datensatz$PRE into datensatz$PRE_mediansplit
+datensatz$PRE_mediansplit <- cut(datensatz$PRE, include.lowest=TRUE,  right=TRUE,
+                                 breaks=c(1, 5.66666666666667, 6))
+
+res2 <- ANOVA(datensatz, dep = "JC_SCEN2", factors = c("PRE_mediansplit", "PRO_mediansplit"),
+             emMeans = list(c("PRE_mediansplit", "PRO_mediansplit")))
+res2$main
+
+res2$emm
+
+datnsatz%>%
+  group_by(PRO_mediansplit, PRE_mediansplit) 
+  ggplot()+
+    aes(x = PRO_mediansplit)
+
+
+# nicht signifikant. Job Crafting bei qualitativ minderwertiger Kommunikation ist nicht abhängig vom prevention focus und vom promotion focus.
+
+#  Hypothese 2
+
+res <- ANOVA(datensatz, dep = "JC_SCEN1", factors = c("PRE_mediansplit", "PRO_mediansplit"),
+        emMeans = list(c("PRE_mediansplit", "PRO_mediansplit")))
+res$main
+
+res$emm
+# signifikant. Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von prevention focus und promotion focus.
