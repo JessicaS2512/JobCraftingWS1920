@@ -20,7 +20,7 @@ raw <- read_csv("job_crafting.csv")
 
 # DataCleaning und Skalenberechnung: ----
 
-raw <- load_qualtrics_csv("job_crafting.csv")
+raw <- read_csv("job_crafting.csv")
 
 filename <- "job_crafting.csv" 
 
@@ -33,9 +33,9 @@ raw_short <- raw %>% select(gender, age, education, activity,
                             jc_scen1_question_1, jc_scen1_question_2, jc_scen1_question_3, jc_scen1_question_4, jc_scen1_question_5, jc_scen1_question_6, jc_scen1_question_7, jc_scen1_question_8, jc_scen1_question_9,
                             jc_scen2_question_1, jc_scen2_question_2, jc_scen2_question_3, jc_scen2_question_4, jc_scen2_question_5, jc_scen2_question_6, jc_scen2_question_7, jc_scen2_question_8, jc_scen2_question_9)
 
-raw_short$education <- ordered(raw_short$education, levels = c("Kein Schulabschluss", "Volks- oder Hauptschulabschluss", "Mittlere Reife/Realschulabschluss", "Fachhochschulreife/Fachabitur", "Allgemeine Hochschulreife/Abitur", "Abgeschlossene Berufsausbildung", "Bachelor", "Master", "Promotion", "Habilitation", "Keiner der hier genannten"))
+raw_short$education <- ordered(raw_short$education, levels = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11))
 
-raw_short$activity <- ordered(raw_short$activity, levels = c("Schüler", "Student", "Auszubildender", "Angestellter", "Selbstständiger", "Rentner", "Arbeitssuchender"))
+raw_short$activity <- ordered(raw_short$activity, levels = c(1, 2, 3, 4, 5, 6, 7))
 
 raw_short$regfoc_1 <- as.numeric(raw_short$regfoc_1)
 raw_short$regfoc_2 <- as.numeric(raw_short$regfoc_2)
@@ -65,7 +65,7 @@ raw_short$jc_scen2_question_7 <- as.numeric(raw_short$jc_scen2_question_7)
 raw_short$jc_scen2_question_8 <- as.numeric(raw_short$jc_scen2_question_8)
 raw_short$jc_scen2_question_9 <- as.numeric(raw_short$jc_scen2_question_9)
 
-scale.zustimmung <- c("Stimme völlig zu", "2", "3", "4", "5", "Stimme gar nicht zu")
+scale.zustimmung <- c(1, 2, 3, 4, 5, 6)
 
 raw_short$regfoc_1 <- ordered(raw_short$regfoc_1, levels = scale.zustimmung)
 raw_short$regfoc_2 <- ordered(raw_short$regfoc_2, levels = scale.zustimmung)
