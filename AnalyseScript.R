@@ -159,3 +159,46 @@ datensatz %>%
   theme_minimal() +
   NULL
 
+# Hypothese 6: Je höher der prevention Fokus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation
+# von organisatorischen Veränderungen in einem Unternehmen.
+
+cor(datensatz$PRE, datensatz$JC_SCEN2, method = "pearson")
+cor.test(datensatz$PRE, datensatz$JC_SCEN2)
+
+# Visualisierung Hypothese 6:
+datensatz %>%
+  ggplot() +
+  aes(x = JC_SCEN2, y = PRE) +
+  geom_jitter(alpha = 0.25, width = 0.1, height = 0.1) +
+  geom_smooth(method = lm, color = "black") +
+  cowplot::theme_half_open() +
+  labs(x = "Job Crafting bei schlechter Kommunikation",
+       y = "Prevention focus",
+       title = "Es gibt einen schwachen Zusammenhang zwischen dem Job Crafting \nund dem Prevention focus.",
+       subtitle = "Pearson-Korrelation im Streudiagramm")
+
+# Bericht Hypothese 6: Es gibt einen signifikanten Zusammenhang zwischen dem Prevention focus und dem Job Crafting bei
+# qualitativ minderweriger Kommunikation ($r = 0.102$, $p<.05$). Das bedeutet: Je höher der Prevention focus, desto 
+# höher das Job Crafting bei qualitativ minderwertiger Kommunikation.
+
+# Hypothese 7: Je höher der promotion Fokus, desto höher ist das Job Crafting bei qualitativ hochwertiger 
+# Kommunikation von Veränderungen in einem Unternehmen.
+
+cor(datensatz$PRO, datensatz$JC_SCEN1, method = "pearson")
+cor.test(datensatz$PRO, datensatz$JC_SCEN1)
+
+# Visualisierung Hypothese 7:
+datensatz %>%
+  ggplot() +
+  aes(x = JC_SCEN1, y = PRO) +
+  geom_jitter(alpha = 0.25, width = 0.1, height = 0.1) +
+  geom_smooth(method = lm, color = "black") +
+  cowplot::theme_half_open() +
+  labs(x = "Job Crafting bei guter Kommunikation",
+       y = "Promotion focus",
+       title = "Es gibt einen Zusammenhang zwischen dem Job Crafting \nund dem Promotion focus.",
+       subtitle = "Pearson-Korrelation im Streudiagramm")
+
+# Bericht Hypothese 7: Es gibt einen signifikanten Zusammenhang zwischen dem Promotion focus und dem Job Crafting bei
+# qualitativ hochwertiger Kommunikation ($r = 0.216$, $p<.001$). Das bedeutet: Je höher der Promotion focus, desto 
+# höher das Job Crafting bei qualitativ hochwertiger Kommunikation.
