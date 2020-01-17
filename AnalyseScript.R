@@ -157,8 +157,34 @@ datensatz %>%
        subtitle = "Histogramm zur Geschlechterverteilung (n=399)", 
        caption =(" ")) +
   theme_minimal() +
+
   NULL
 
+<<<<<<< HEAD
+# Hypothese 1
+# Formulierung: Prevention focussed Menschen haben mehr Job Crafting bei schlechter Kommunikation als nicht-prevention focussed Menschen
+library(questionr)
+
+## Cutting datensatz$PRO into datensatz$PRO_mediansplit
+datensatz$PRO_mediansplit <- cut(datensatz$PRO, include.lowest=TRUE,  right=TRUE,
+                                 breaks=c(1.25, 4.75, 6))
+## Cutting datensatz$PRE into datensatz$PRE_mediansplit
+datensatz$PRE_mediansplit <- cut(datensatz$PRE, include.lowest=TRUE,  right=TRUE,
+                                 breaks=c(1, 5.66666666666667, 6))
+
+ANOVA(datensatz, dep = "JC_SCEN2", factors ="PRE_mediansplit", 
+      postHoc = JC_SCEN2 ~ PRE_mediansplit)
+
+# der mittlere Unterschied von -0.124 ist signifikant
+
+#  Hypothese 2
+
+ANOVA(datensatz, dep = "JC_SCEN1", factors ="PRO_mediansplit", 
+      postHoc = JC_SCEN1 ~ PRO_mediansplit)
+
+# ANOVA Tabelle sagt uns: verwirf die Hypothese H0 (signifikant)
+# der mittlere Unterschied von -0.149 ist signifikant. Promotion focussed und nicht promotion-focussed unterscheiden sich im Job Crafting bei schlechter Kommunikation (Unterschied M = -0.149)
+=======
 # Hypothese 6: Je höher der prevention Fokus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation
 # von organisatorischen Veränderungen in einem Unternehmen.
 
@@ -212,3 +238,4 @@ datensatz %>%
 # Bericht Hypothese 7: Es gibt einen signifikanten Zusammenhang zwischen dem Promotion focus und dem Job Crafting bei
 # qualitativ hochwertiger Kommunikation ($r = 0.216$, $p<.001$). Das bedeutet: Je höher der Promotion focus, desto 
 # höher das Job Crafting bei qualitativ hochwertiger Kommunikation.
+>>>>>>> 7476e612d1c2ea2c84baa2b4f53061a2e0ce3f7a
