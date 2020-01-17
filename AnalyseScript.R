@@ -171,6 +171,16 @@ datensatz$PRO_mediansplit <- cut(datensatz$PRO, include.lowest=TRUE,  right=TRUE
 datensatz$PRE_mediansplit <- cut(datensatz$PRE, include.lowest=TRUE,  right=TRUE,
                                  breaks=c(1, 5.66666666666667, 6))
 
+res2 <- ANOVA(datensatz, dep = "JC_SCEN2", factors = c("PRE_mediansplit", "PRO_mediansplit"),
+              emMeans = list(c("PRE_mediansplit", "PRO_mediansplit")))
+res2$main
+res2$emm
+datensatz%>%
+  group_by(PRO_mediansplit, PRE_mediansplit) 
+ggplot()+
+  aes(x = PRO_mediansplit)
+
+
 ANOVA(datensatz, dep = "JC_SCEN2", factors ="PRE_mediansplit", 
       postHoc = JC_SCEN2 ~ PRE_mediansplit)
 
