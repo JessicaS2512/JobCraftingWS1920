@@ -247,3 +247,65 @@ datensatz %>%
 # Bericht Hypothese 7: Es gibt einen signifikanten Zusammenhang zwischen dem Promotion focus und dem Job Crafting bei
 # qualitativ hochwertiger Kommunikation ($r = 0.216$, $p<.001$). Das bedeutet: Je höher der Promotion focus, desto 
 # höher das Job Crafting bei qualitativ hochwertiger Kommunikation.
+
+#Hypothese 9 - Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen 
+#in einem Unternehmen ist abhängig von prevention Fokus und promotion Fokus.
+
+jmv::linReg(datensatz, dep = "JC_SCEN2", covs = c("PRO", "PRE"),
+            blocks = list("PRO", "PRE"),
+            norm = TRUE,
+            r2Adj = TRUE, 
+            anova = TRUE,
+            stdEst = TRUE,
+            qqPlot = TRUE)
+
+
+#Die multiple lineare Regression liefert zwei Modelle mit einem Prädiktoren (siehe Tabelle, $F(1, 430) = 16.07$, $p<.05$). 
+#Dabei wird nur der promotion Fokus signifikant (siehe Tabelle). 
+
+#Tabelle 1: Prädiktor der multiplen linearen Regression.
+
+#Predictor    Estimate    SE        t        p         Stand. Estimate  
+----------    --------    ------    -----   --------   ----------------
+  #Intercept      2.9450    0.2170    13.57    < .001                      
+  #PRO            0.1260    0.0314     4.01    < .001             0.1951   
+  #PRE            0.0405    0.0372     1.09     0.278             0.0529 
+  
+  
+  # Visualisierung Hypothese 9
+  
+  datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN2) + 
+  geom_point(alpha = 0.25) + 
+  geom_smooth(method = "lm")
+
+
+#Hypothese 10 - Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen
+#in einem Unternehmen ist abhängig von prevention Fokus und promotion Fokus.
+
+jmv::linReg(datensatz, dep = "JC_SCEN1", covs = c("PRO", "PRE"),
+            blocks = list("PRO", "PRE"),
+            norm = TRUE,
+            r2Adj = TRUE, 
+            anova = TRUE,
+            stdEst = TRUE,
+            qqPlot = TRUE)
+
+#Die multiple lineare Regression liefert zwei Modelle mit zwei Prädiktoren (siehe Tabelle, $F(2, 430) = 24.5$, $p<.01$). 
+#Dabei werden sowohl prevention Fokus als auch promotion Fokus signifikant (siehe Tabelle). 
+
+#Visualisierung Hypothese 10 
+datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN1) + 
+  geom_point(alpha = 0.25) + 
+  geom_smooth(method = "lm")
+
+datensatz %>% ggplot() + aes(x = PRE, y = JC_SCEN1) + 
+  geom_point(alpha = 0.25) + 
+  geom_smooth(method = "lm") +
+  NULL
+
+#Model Coefficients - JC_SCEN1                                             
+#Predictor    Estimate    SE        t        p         Stand. Estimate   
+---------    --------    ------    -----    ------    ---------------  
+  #Intercept       2.749    0.2076    13.24    < .001                      
+  #PRO             0.110    0.0301     3.66    < .001              0.176   
+  #PRE             0.119    0.0356     3.34    < .001              0.160 
