@@ -60,31 +60,31 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 
 **Unterschiedshypothesen**
 
-1. Hypothese: Personen mit einem prevention focus haben ein höheres Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen als Personen ohne prevention focus.  
-**H0**: Personen mit und ohne prevention focus gleichen sich hinsichtlich des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H1**: Personen mit und ohne prevention focus unterscheiden sich hinsichtlich des Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+1. Hypothese: Personen mit einem Prevention Focus haben ein höheres Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen als Personen ohne Prevention Focus.  
+**H0**: Personen mit und ohne Prevention Focus gleichen sich hinsichtlich des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen.  
+**H1**: Personen mit und ohne Prevention Focus unterscheiden sich hinsichtlich des Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen.  
 **Testverfahren**: unverbundener t-Test  
-**UV**: prevention focus (prevention focus vs. kein prevention focus)  
+**UV**: Prevention Focus (Prevention Focus vs. kein Prevention Focus)  
 **AV**: Grad des Job Craftings
 
-2. Hypothese: Personen mit einem promotion focus haben ein höheres Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen als Personen ohne promotion focus.  
-**H0**: Personen mit und ohne promotion focus gleichen sich hinsichtlich des Job Craftings bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H1**: Personen mit und ohne promotion focus unterscheiden sich hinsichtlich des Job Craftings bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+2. Hypothese: Personen mit einem Promotion Focus haben ein höheres Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen als Personen ohne Promotion Focus.  
+**H0**: Personen mit und ohne Promotion Focus gleichen sich hinsichtlich des Job Craftings bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen.  
+**H1**: Personen mit und ohne Promotion Focus unterscheiden sich hinsichtlich des Job Craftings bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen.  
 **Testverfahren**: unverbundener t-Test  
-**UV**: promotion focus (promotion focus vs. kein promotion focus)  
+**UV**: Promotion Focus (Promotion Focus vs. kein Promotion Focus)  
 **AV**: Grad des Job Craftings
 
-3. Hypothese: Personen mit einem prevention focus suchen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als Personen ohne prevention focus.  
-**H0**: Personen mit und ohne prevention focus gleich sich hinsichtlich des Grades der Suche nach Herausforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+3. Hypothese: Personen mit einem Prevention Focus suchen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen eher nach Herausforderungen als Personen ohne Prevention Focus.  
+**H0**: Personen mit und ohne Prevention Focus gleich sich hinsichtlich des Grades der Suche nach Herausforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen.  
 **Testverfahren**: unverbundener t-Test  
-**UV**: prevention focus (prevention focus vs. kein prevention focus)  
+**UV**: Prevention Focus (Prevention Focus vs. kein Prevention Focus)  
 **AV**: Grad der Suche nach Herausforderungen
 
-4. Hypothese: Personen mit einem promotion focus versuchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher Anforderungen zu reduzieren als Personen ohne promotion focus.  
-**H0**: Personen mit und ohne promotion focus gleich sich hinsichtlich des Grades der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H1**: Personen mit und ohne promotion focus unterscheiden sich hinsichtlich des Grades der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+4. Hypothese: Personen mit einem Promotion Focus versuchen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen eher Anforderungen zu reduzieren als Personen ohne Promotion Focus.  
+**H0**: Personen mit und ohne Promotion Focus gleich sich hinsichtlich des Grades der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen.  
+**H1**: Personen mit und ohne Promotion Focus unterscheiden sich hinsichtlich des Grades der Reduktion von Anforderungen bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen.  
 **Testverfahren**: unverbundener t-Test  
-**UV**: promotion focus (promotion focus vs. kein promotion focus)  
+**UV**: Promotion Focus (Promotion Focus vs. kein Promotion Focus)  
 **AV**: Grad der Reduktion von Anforderungen
 
 5. Hypothese: Es besteht ein Unterschied im Job Crafting zwischen Personen mit unterschiedlichen Tätigkeitstypen.  
@@ -96,27 +96,27 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 
 **Zusammenhangshypothesen**
 
-6. Hypothese: Je höher der prevention Fokus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H0**: Es gibt keinen Zusammenhang zwischen prevention Fokus und Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H1**: Es gibt einen Zusammenhang zwischen prevention Fokus und Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+6. Hypothese: Je höher der Prevention Focus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen.  
+**H0**: Es gibt keinen Zusammenhang zwischen Prevention Focus und Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen.  
+**H1**: Es gibt einen Zusammenhang zwischen Prevention Focus und Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen.  
 **Testverfahren**: Korrelation (Pearson)
 
-7. Hypothese: Je höher der promotion Fokus, desto höher ist das Job Crafting bei qualitativ hochwertiger Kommunikation von Veränderungen in einem Unternehmen.  
-**H0**: Es gibt keinen Zusammenhang zwischen promotion Fokus und Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H1**: Es gibt einen Zusammenhang zwischen promotion Fokus und Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+7. Hypothese: Je höher der Promotion Focus, desto höher ist das Job Crafting bei qualitativ hochwertiger Kommunikation von Veränderungen.  
+**H0**: Es gibt keinen Zusammenhang zwischen Promotion Focus und Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen.  
+**H1**: Es gibt einen Zusammenhang zwischen Promotion Focus und Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen.  
 **Testverfahren**: Korrelation (Pearson)
 
-8. Hypothese: Je höher der prevention Fokus, desto eher sucht man nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H0**: Es gibt keinen Zusammenhang zwischen prevention Fokus und der Suche nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**H1**: Es gibt einen Zusammenhang zwischen prevention Fokus und der Suche nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
+8. Hypothese: Je höher der Prevention Focus, desto eher sucht man nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen.  
+**H0**: Es gibt keinen Zusammenhang zwischen Prevention Focus und der Suche nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen.  
+**H1**: Es gibt einen Zusammenhang zwischen Prevention Focus und der Suche nach Hilfestellungen bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen.  
 **Testverfahren**: Korrelation (Pearson)
 
-9. Hypothese: Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen ist abhängig von prevention Fokus und promotion Fokus.  
-**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von prevention Fokus und promotion Fokus.  
-**H1**: Es besteht eine Abhängigkeit des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von prevention Fokus und promotion Fokus.  
+9. Hypothese: Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von Prevention Focus und Promotion Focus.  
+**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen von Prevention Focus und Promotion Focus.  
+**H1**: Es besteht eine Abhängigkeit des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen von Prevention Focus und Promotion Focus.  
 **Testverfahren**: lineare Regression
 
-10. Hypothese: Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen ist abhängig von prevention Fokus und promotion Fokus.  
-**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von dem prevention Fokus und dem promotion Fokus.  
-**H1**: Es besteht eine Abhängigkeit des Job Craftings bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen von dem prevention Fokus und dem promotion Fokus.  
+10. Hypothese: Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen ist abhängig von Prevention Focus und Promotion Focus.  
+**H0**: Es besteht keine Abhängigkeit des Job Craftings bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen von dem Prevention Focus und dem Promotion Focus.  
+**H1**: Es besteht eine Abhängigkeit des Job Craftings bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen von dem Prevention Focus und dem Promotion Focus.  
 **Testverfahren**: lineare Regression
