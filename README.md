@@ -63,7 +63,7 @@ Die Art, wie diese Änderung in meinem Unternehmen an mich kommuniziert wird, br
 1. Hypothese: Personen mit einem prevention focus haben ein höheres Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen als Personen ohne prevention focus.  
 **H0**: Personen mit und ohne prevention focus gleichen sich hinsichtlich des Job Craftings bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
 **H1**: Personen mit und ohne prevention focus unterscheiden sich hinsichtlich des Job Crafting bei qualitativ minderwertiger Kommunikation von organisatorischen Veränderungen in einem Unternehmen.  
-**Testverfahren**: zweifaktorielle ANOVA  
+**Testverfahren**: unverbundener t-Test
 **UV**: prevention focus (prevention focus vs. kein prevention focus)  
 **AV**: Grad des Job Craftings
 
