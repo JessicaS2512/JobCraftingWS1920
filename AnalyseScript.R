@@ -158,8 +158,13 @@ datensatz %>%
        subtitle = "Histogramm zur Geschlechterverteilung (n=399)", 
        caption =(" ")) +
   theme_minimal() +
-
   NULL
+
+# Der folgende Code zählt, wie viele Personen männlich bzw. weiblich waren:
+
+datensatz %>% 
+  group_by(gender) %>%
+  summarise(count = n())
 
 # ALT Hypothese 1
 # Formulierung: Prevention focussed Menschen haben mehr Job Crafting bei schlechter Kommunikation als nicht-prevention focussed Menschen
@@ -347,7 +352,7 @@ datensatz %>% ggplot() + aes(x = PRE, y = JC_SCEN1) +
 
 #Model Coefficients - JC_SCEN1                                             
 #Predictor    Estimate    SE        t        p         Stand. Estimate   
----------    --------    ------    -----    ------    ---------------  
+# ---------    --------    ------    -----    ------    ---------------  
   #Intercept       2.749    0.2076    13.24    < .001                      
   #PRO             0.110    0.0301     3.66    < .001              0.176   
   #PRE             0.119    0.0356     3.34    < .001              0.160 
