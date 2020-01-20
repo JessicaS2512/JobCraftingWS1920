@@ -161,30 +161,72 @@ datensatz %>%
 
   NULL
 
-# Hypothese 1
+# ALT Hypothese 1
 # Formulierung: Prevention focussed Menschen haben mehr Job Crafting bei schlechter Kommunikation als nicht-prevention focussed Menschen
 
 ## Cutting datensatz$PRO into datensatz$PRO_mediansplit
-datensatz$PRO_mediansplit <- cut(datensatz$PRO, include.lowest=TRUE,  right=TRUE,
-                                 breaks=c(1.25, 4.75, 6))
+# datensatz$PRO_mediansplit <- cut(datensatz$PRO, include.lowest=TRUE,  right=TRUE,
+#                                 breaks=c(1.25, 4.75, 6))
 ## Cutting datensatz$PRE into datensatz$PRE_mediansplit
-datensatz$PRE_mediansplit <- cut(datensatz$PRE, include.lowest=TRUE,  right=TRUE,
-                                 breaks=c(1, 5.66666666666667, 6))
+# datensatz$PRE_mediansplit <- cut(datensatz$PRE, include.lowest=TRUE,  right=TRUE,
+#                                 breaks=c(1, 5.66666666666667, 6))
 
-res2 <- ANOVA(datensatz, dep = "JC_SCEN2", factors = c("PRE_mediansplit", "PRO_mediansplit"),
-              emMeans = list(c("PRE_mediansplit", "PRO_mediansplit")))
-res2$main
-res2$emm
-datensatz%>%
-  group_by(PRO_mediansplit, PRE_mediansplit) 
-ggplot()+
-  aes(x = PRO_mediansplit)
+# res2 <- ANOVA(datensatz, dep = "JC_SCEN2", factors = c("PRE_mediansplit", "PRO_mediansplit"),
+#              emMeans = list(c("PRE_mediansplit", "PRO_mediansplit")))
+# res2$main
+# res2$emm
+# datensatz%>%
+#  group_by(PRO_mediansplit, PRE_mediansplit) 
+# ggplot()+
+#  aes(x = PRO_mediansplit)
 
 
-ANOVA(datensatz, dep = "JC_SCEN2", factors ="PRE_mediansplit", 
-      postHoc = JC_SCEN2 ~ PRE_mediansplit)
+# ANOVA(datensatz, dep = "JC_SCEN2", factors ="PRE_mediansplit", 
+#      postHoc = JC_SCEN2 ~ PRE_mediansplit)
 
 # der mittlere Unterschied von -0.124 ist signifikant
+
+# NEU Mediansplit:
+
+median(datensatz$PRE)
+median(datensatz$PRO)
+
+datensatz <- datensatz %>%
+  mutate(prevention_category = case_when(PRE > 5.666667 ~ "Prevention Focus",
+                                          TRUE ~ "Kein Prevention Focus"))
+
+datensatz <- datensatz %>%
+  mutate(promotion_category = case_when(PRO > 4.75 ~ "Promotion Focus",
+                                         TRUE ~ "Kein Promotion Focus"))
+
+# NEU Hypothese 1: Personen mit einem prevention focus haben ein höheres Job Crafting bei qualitativ minderwertiger 
+# Kommunikation von organisatorischen Veränderungen in einem Unternehmen als Personen ohne prevention focus.
+
+t.test(datensatz$JC_SCEN2 ~datensatz$prevention_category)
+
+# Bericht Hypothese 1: In der Stichprobe haben Personen mit Prevention Focus (M=3.8) ein höherens Job Crafting als 
+# Personen ohne Prevention Focus (M=3.68). Dieser Unterschied ist signifikant (t(391.53)=-2.14, p < .05) und liegt 
+# mit 95% Sicherheit zwischen -0.24 und -0.01 Punkten einer 6-stufigen Skala.
+
+# Visualisierung:
+  
+datensatz %>%
+  group_by(prevention_category) %>%
+  summarise(JC_SCEN2_m = mean(JC_SCEN2)-1, JC_SCEN2_sem = std.error(JC_SCEN2)) %>%
+  ggplot() +
+  aes(x = prevention_category, weight = JC_SCEN2_m, ymin = JC_SCEN2_m - JC_SCEN2_sem, ymax = JC_SCEN2_m + JC_SCEN2_sem, fill = prevention_category) +
+  geom_bar(fill = c(rwthfarben$lightblue, rwthfarben$red), width = 0.4) +
+  geom_errorbar(width = 0.2) +
+  theme(plot.title = element_text(size=12),
+        axis.title = element_text(size=10)) +
+  scale_y_continuous(limits = c(0,5)) +
+  labs(x = "Prevention Focus",
+       y = "Job Crafting bei schlechter Kommunikation [0-5]",
+       title = "Personen mit Prevention Focus haben ein \nhöheres Job Crafting also Personen \nohne Prevention Focus",
+       subtitle = "Unterschiede im Säulendiagramm [n=433]",
+       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts") +
+  theme_linedraw() +
+  NULL
 
 #  Hypothese 2
 
@@ -212,7 +254,7 @@ datensatz %>%
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Job Crafting bei schlechter Kommunikation",
-       y = "Prevention focus",
+       y = "Prevention focus" [1-6],
        title = "Es gibt einen schwachen Zusammenhang \nzwischen dem Job Crafting und dem \nPrevention focus.",
        subtitle = "Pearson-Korrelation im Streudiagramm") +
   NULL
@@ -239,7 +281,7 @@ datensatz %>%
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Job Crafting bei guter Kommunikation",
-       y = "Promotion focus",
+       y = "Promotion focus" [1-6],
        title = "Es gibt einen Zusammenhang zwischen dem \nJob Crafting und dem Promotion focus.",
        subtitle = "Pearson-Korrelation im Streudiagramm") +
   NULL
