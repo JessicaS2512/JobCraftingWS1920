@@ -344,7 +344,18 @@ jmv::linReg(datensatz, dep = "JC_SCEN2", covs = c("PRO", "PRE"),
   
   datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN2) + 
   geom_point(alpha = 0.25) + 
-  geom_smooth(method = "lm")
+  geom_smooth(method = "lm", color = "black") +
+                cowplot::theme_half_open() + 
+  theme(plot.title = element_text(size=12),
+        axis.title = element_text(size=10)) +
+  scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
+  scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
+  labs(x = "Promotion focus",
+       y = "Job Crafting bei schlechter Kommunikation" [1-6],
+       title = "Job Crafting bei qualitativ minderwertiger Kommunikation ist abhängig vom promotion Fokus.",
+       subtitle = "Lineare Regression im Streudiagramm") +
+  NULL
+  
 
 
 #Hypothese 10 - Job Crafting bei qualitativ hochwertiger Kommunikation von organisatorischen Veränderungen
@@ -364,11 +375,31 @@ jmv::linReg(datensatz, dep = "JC_SCEN1", covs = c("PRO", "PRE"),
 #Visualisierung Hypothese 10 
 datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN1) + 
   geom_point(alpha = 0.25) + 
-  geom_smooth(method = "lm")
+  geom_smooth(method = "lm", color = "black") +
+                cowplot::theme_half_open() +
+  theme(plot.title = element_text(size=12),
+        axis.title = element_text(size=10)) +
+  scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
+  scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
+  labs(x = "Promotion focus",
+       y = "Job Crafting bei guter Kommunikation" [1-6],
+       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom promotion Fokus.",
+       subtitle = "Lineare Regression im Streudiagramm") +
+  NULL
+
 
 datensatz %>% ggplot() + aes(x = PRE, y = JC_SCEN1) + 
   geom_point(alpha = 0.25) + 
-  geom_smooth(method = "lm") +
+  geom_smooth(method = "lm", color = "black") +
+                cowplot::theme_half_open() +
+  theme(plot.title = element_text(size=12),
+        axis.title = element_text(size=10)) +
+  scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
+  scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
+  labs(x = "Prevention focus",
+       y = "Job Crafting bei guter Kommunikation" [1-6],
+       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom prevention Fokus.",
+       subtitle = "Lineare Regression im Streudiagramm") +
   NULL
 
 #Model Coefficients - JC_SCEN1                                             
