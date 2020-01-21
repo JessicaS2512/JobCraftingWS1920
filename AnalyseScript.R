@@ -227,19 +227,40 @@ datensatz %>%
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "Prevention Focus",
        y = "Job Crafting bei schlechter Kommunikation [0-5]",
-       title = "Personen mit Prevention Focus haben ein \nhöheres Job Crafting also Personen \nohne Prevention Focus",
+       title = "Personen mit Prevention Focus haben ein \nhöheres Job Crafting als Personen \nohne Prevention Focus",
        subtitle = "Unterschiede im Säulendiagramm [n=433]",
        caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts") +
   theme_linedraw() +
   NULL
 
-#  Hypothese 2
+# NEU Hypothese 2: Personen mit einem Promotion Focus haben ein höheres Job Crafting bei qualitativ 
+# hochwertiger Kommunikation von organisatorischen Veränderungen als Personen ohne Promotion Focus.
 
-ANOVA(datensatz, dep = "JC_SCEN1", factors ="PRO_mediansplit", 
-      postHoc = JC_SCEN1 ~ PRO_mediansplit)
+t.test(datensatz$JC_SCEN1 ~datensatz$promotion_category)
 
-# ANOVA Tabelle sagt uns: verwirf die Hypothese H0 (signifikant)
-# der mittlere Unterschied von -0.149 ist signifikant. Promotion focussed und nicht promotion-focussed unterscheiden sich im Job Crafting bei schlechter Kommunikation (Unterschied M = -0.149)
+# Bericht: In der Stichprobe haben Personen mit Promotion Focus (M=3.98) ein höheres Job Crafting als
+# Personen ohne Promotion Focus (M=3.83). Dieser Unterschied ist signifikant (t(345.65)=-2.66, p < .01)
+# und liegt mit 95% Sicherheit zwischen -0.26 und -0.04 Punkten einer 6-stufigen Skala.
+
+# Visualisierung:
+
+datensatz %>%
+  group_by(promotion_category) %>%
+  summarise(JC_SCEN1_m = mean(JC_SCEN1)-1, JC_SCEN1_sem = std.error(JC_SCEN1)) %>%
+  ggplot() +
+  aes(x = promotion_category, weight = JC_SCEN1_m, ymin = JC_SCEN1_m - JC_SCEN1_sem, ymax = JC_SCEN1_m + JC_SCEN1_sem, fill = promotion_category) +
+  geom_bar(fill = c(rwthfarben$lightblue, rwthfarben$red), width = 0.4) +
+  geom_errorbar(width = 0.2) +
+  theme(plot.title = element_text(size=12),
+        axis.title = element_text(size=10)) +
+  scale_y_continuous(limits = c(0,5)) +
+  labs(x = "Promotion Focus",
+       y = "Job Crafting bei guter Kommunikation [0-5]",
+       title = "Personen mit Promotion Focus haben ein \nhöheres Job Crafting als Personen \nohne Promotion Focus",
+       subtitle = "Unterschiede im Säulendiagramm [n=433]",
+       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts") +
+  theme_linedraw() +
+  NULL
 
 # Hypothese 6: Je höher der prevention Fokus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation
 # von organisatorischen Veränderungen in einem Unternehmen.
