@@ -164,7 +164,18 @@ datensatz %>%
 
 datensatz %>% 
   group_by(gender) %>%
-  summarise(count = n())
+  summarise(gender_count = n())
+
+#Code zählt höchsten Bildungsabschluss
+datensatz%>%
+  group_by(education) %>%
+  summarise(education_count = n())
+
+#Code zählt Tätigkeit
+datensatz%>%
+  group_by(activity) %>%
+  summarise(activity_count = n())
+
 
 # ALT Hypothese 1
 # Formulierung: Prevention focussed Menschen haben mehr Job Crafting bei schlechter Kommunikation als nicht-prevention focussed Menschen
