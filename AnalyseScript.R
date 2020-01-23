@@ -314,7 +314,7 @@ datensatz %>%
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Job Crafting bei guter Kommunikation",
        y = "Promotion Focus" [1-6],
-       title = "Es gibt einen Zusammenhang zwischen dem \nJob Crafting und dem Promotion Focus.",
+       title = "Es gibt einen schwachen Zusammenhang zwischen \ndem Job Crafting und dem Promotion Focus.",
        subtitle = "Pearson-Korrelation im Streudiagramm n=433") +
   NULL
 
@@ -510,7 +510,7 @@ datensatz %>%
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Prevention Focus",
        y = "Promotion Focus" [1-6],
-       title = "Es gibt einen  Zusammenhang zwischen dem \nPrevention und Promotion Focus.",
+       title = "Es gibt einen  schwachen Zusammenhang zwischen dem \nPrevention und Promotion Focus.",
        subtitle = "Pearson-Korrelation im Streudiagramm n=433") +
   NULL
 
