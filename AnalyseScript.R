@@ -229,15 +229,13 @@ datensatz %>%
   aes(x = prevention_category, weight = JC_SCEN2_m, ymin = JC_SCEN2_m - JC_SCEN2_sem, ymax = JC_SCEN2_m + JC_SCEN2_sem, fill = prevention_category) +
   geom_bar(fill = c(rwthfarben$lightblue, rwthfarben$red), width = 0.4) +
   geom_errorbar(width = 0.2) +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "Prevention Focus",
        y = "Job Crafting bei schlechter Kommunikation [0-5]",
-       title = "Personen mit Prevention Focus haben ein \nleicht höheres Job Crafting als Personen \nohne Prevention Focus",
+       title = "Personen mit Prevention Focus haben ein \nleicht höheres Job Crafting als Personen \nohne Prevention Focus.",
        subtitle = "Unterschiede im Säulendiagramm [n=433]",
        caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
-  theme_linedraw() +
+  theme_minimal() +
   NULL
 
 # NEU Hypothese 2: Personen mit einem Promotion Focus haben ein höheres Job Crafting bei qualitativ 
@@ -259,15 +257,13 @@ datensatz %>%
   aes(x = promotion_category, weight = JC_SCEN1_m, ymin = JC_SCEN1_m - JC_SCEN1_sem, ymax = JC_SCEN1_m + JC_SCEN1_sem, fill = promotion_category) +
   geom_bar(fill = c(rwthfarben$lightblue, rwthfarben$red), width = 0.4) +
   geom_errorbar(width = 0.2) +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "Promotion Focus",
        y = "Job Crafting bei guter Kommunikation [0-5]",
-       title = "Personen mit Promotion Focus haben ein \nhöheres Job Crafting als Personen \nohne Promotion Focus",
+       title = "Personen mit Promotion Focus haben ein \nhöheres Job Crafting als Personen \nohne Promotion Focus.",
        subtitle = "Unterschiede im Säulendiagramm [n=433]",
        caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
-  theme_linedraw() +
+  theme_minimal() +
   NULL
 
 # Hypothese 6: Je höher der prevention Fokus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation
@@ -282,9 +278,7 @@ datensatz %>%
   aes(x = JC_SCEN2, y = PRE) +
   geom_jitter(alpha = 0.25) +
   geom_smooth(method = lm, color = "black") +
-  cowplot::theme_half_open() +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+ theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Job Crafting bei schlechter Kommunikation",
@@ -309,9 +303,7 @@ datensatz %>%
   aes(x = JC_SCEN1, y = PRO) +
   geom_jitter(alpha = 0.25, width = 0.1, height = 0.1) +
   geom_smooth(method = lm, color = "black") +
-  cowplot::theme_half_open() +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+  theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Job Crafting bei guter Kommunikation",
@@ -354,9 +346,7 @@ jmv::linReg(datensatz, dep = "JC_SCEN2", covs = c("PRO", "PRE"),
   datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN2) + 
   geom_point(alpha = 0.25) + 
   geom_smooth(method = "lm", color = "black") +
-                cowplot::theme_half_open() + 
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+                theme_minimal() + 
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Promotion Focus",
@@ -385,9 +375,7 @@ jmv::linReg(datensatz, dep = "JC_SCEN1", covs = c("PRO", "PRE"),
 datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN1) + 
   geom_point(alpha = 0.25) + 
   geom_smooth(method = "lm", color = "black") +
-                cowplot::theme_half_open() +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+                theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Promotion Focus",
@@ -400,9 +388,7 @@ datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN1) +
 datensatz %>% ggplot() + aes(x = PRE, y = JC_SCEN1) + 
   geom_point(alpha = 0.25) + 
   geom_smooth(method = "lm", color = "black") +
-                cowplot::theme_half_open() +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+                theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Prevention Focus",
