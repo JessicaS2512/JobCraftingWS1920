@@ -290,7 +290,7 @@ datensatz %>%
   labs(x = "Job Crafting bei schlechter Kommunikation",
        y = "Prevention Focus" [1-6],
        title = "Es gibt einen schwachen Zusammenhang \nzwischen dem Job Crafting und dem \nPrevention Focus.",
-       subtitle = "Pearson-Korrelation im Streudiagramm") +
+       subtitle = "Pearson-Korrelation im Streudiagramm n=433") +
   NULL
 
 # Bericht Hypothese 6: Es gibt einen signifikanten Zusammenhang zwischen dem Prevention focus und dem Job Crafting bei
@@ -315,7 +315,7 @@ datensatz %>%
   labs(x = "Job Crafting bei guter Kommunikation",
        y = "Promotion Focus" [1-6],
        title = "Es gibt einen Zusammenhang zwischen dem \nJob Crafting und dem Promotion Focus.",
-       subtitle = "Pearson-Korrelation im Streudiagramm") +
+       subtitle = "Pearson-Korrelation im Streudiagramm n=433") +
   NULL
 
 # Bericht Hypothese 7: Es gibt einen signifikanten Zusammenhang zwischen dem Promotion focus und dem Job Crafting bei
@@ -358,7 +358,7 @@ jmv::linReg(datensatz, dep = "JC_SCEN2", covs = c("PRO", "PRE"),
   labs(x = "Promotion Focus",
        y = "Job Crafting bei \nschlechter Kommunikation" [1-6],
        title = "Job Crafting bei qualitativ minderwertiger Kommunikation ist abhängig vom Promotion Focus.",
-       subtitle = "Lineare Regression im Streudiagramm") +
+       subtitle = "Lineare Regression im Streudiagramm n=433") +
   NULL
   
 
@@ -387,7 +387,7 @@ datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN1) +
   labs(x = "Promotion Focus",
        y = "Job Crafting bei \nguter Kommunikation" [1-6],
        title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom Promotion Focus.",
-       subtitle = "Lineare Regression im Streudiagramm") +
+       subtitle = "Lineare Regression im Streudiagramm n=433") +
   NULL
 
 
@@ -400,7 +400,7 @@ datensatz %>% ggplot() + aes(x = PRE, y = JC_SCEN1) +
   labs(x = "Prevention Focus",
        y = "Job Crafting bei \nguter Kommunikation" [1-6],
        title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom Prevention Focus.",
-       subtitle = "Lineare Regression im Streudiagramm") +
+       subtitle = "Lineare Regression im Streudiagramm n=433") +
   NULL
 
 #Model Coefficients - JC_SCEN1                                             
@@ -437,7 +437,7 @@ datensatz %>%
   geom_line() +
   scale_y_continuous(limits = c(1,6), breaks = 1:6) +
   labs(title = "Es gibt Unterschiede hinsichtlich des \nJob Craftings, die abhängig davon sind, \nob man einen Promotion oder Prevention \nFocus hat.",
-       subtitle = "Mittelwertplot mit 95%-Konfidenzintervall",
+       subtitle = "Mittelwertplot mit 95%-Konfidenzintervall n=433",
        x = "Prevention Focus",
        color = "Promotion Focus",
        y = "Job Crafting bei \nschlechter Kommunikation") +
@@ -474,7 +474,7 @@ datensatz %>%
   geom_line() +
   scale_y_continuous(limits = c(1,6), breaks = 1:6) +
   labs(title = "Es gibt Unterschiede hinsichtlich des \nJob Craftings, die abhängig davon sind, \nob man einen Promotion oder Prevention \nFocus hat.",
-       subtitle = "Mittelwertplot mit 95%-Konfidenzintervall",
+       subtitle = "Mittelwertplot mit 95%-Konfidenzintervall n=433",
        x = "Prevention Focus",
        color = "Promotion Focus",
        y = "Job Crafting bei \nguter Kommunikation") +
@@ -511,7 +511,7 @@ datensatz %>%
   labs(x = "Prevention Focus",
        y = "Promotion Focus" [1-6],
        title = "Es gibt einen  Zusammenhang zwischen dem \nPrevention und Promotion Focus.",
-       subtitle = "Pearson-Korrelation im Streudiagramm") +
+       subtitle = "Pearson-Korrelation im Streudiagramm n=433") +
   NULL
 
 
