@@ -123,6 +123,19 @@ datensatz <- datensatz %>%
   select(-starts_with("jc_scen1", ignore.case = F)) %>%
   select(-starts_with("jc_scen2", ignore.case = F))
 
+# NEU Mediansplit:
+
+median(datensatz$PRE)
+median(datensatz$PRO)
+
+datensatz <- datensatz %>%
+  mutate(prevention_category = case_when(PRE > 5.666667 ~ "Prevention Focus",
+                                         TRUE ~ "Kein Prevention Focus"))
+
+datensatz <- datensatz %>%
+  mutate(promotion_category = case_when(PRO > 4.75 ~ "Promotion Focus",
+                                        TRUE ~ "Kein Promotion Focus"))
+
 saveRDS(datensatz, "data/datensatz.rds")
 # Statistische Analyse und Grafiken:----
 
@@ -198,18 +211,6 @@ datensatz %>%
 
 # der mittlere Unterschied von -0.124 ist signifikant
 
-# NEU Mediansplit:
-
-median(datensatz$PRE)
-median(datensatz$PRO)
-
-datensatz <- datensatz %>%
-  mutate(prevention_category = case_when(PRE > 5.666667 ~ "Prevention Focus",
-                                          TRUE ~ "Kein Prevention Focus"))
-
-datensatz <- datensatz %>%
-  mutate(promotion_category = case_when(PRO > 4.75 ~ "Promotion Focus",
-                                         TRUE ~ "Kein Promotion Focus"))
 
 # NEU Hypothese 1: Personen mit einem prevention focus haben ein höheres Job Crafting bei qualitativ minderwertiger 
 # Kommunikation von organisatorischen Veränderungen in einem Unternehmen als Personen ohne prevention focus.
@@ -224,7 +225,7 @@ t.test(datensatz$JC_SCEN2 ~datensatz$prevention_category)
   
 datensatz %>%
   group_by(prevention_category) %>%
-  summarise(JC_SCEN2_m = mean(JC_SCEN2)-1, JC_SCEN2_sem = std.error(JC_SCEN2)) %>%
+  summarise(JC_SCEN2_m = mean(JC_SCEN2), JC_SCEN2_sem = std.error(JC_SCEN2)) %>%
   ggplot() +
   aes(x = prevention_category, weight = JC_SCEN2_m, ymin = JC_SCEN2_m - JC_SCEN2_sem, ymax = JC_SCEN2_m + JC_SCEN2_sem, fill = prevention_category) +
   geom_bar(fill = c(rwthfarben$lightblue, rwthfarben$red), width = 0.4) +
@@ -252,7 +253,7 @@ t.test(datensatz$JC_SCEN1 ~datensatz$promotion_category)
 
 datensatz %>%
   group_by(promotion_category) %>%
-  summarise(JC_SCEN1_m = mean(JC_SCEN1)-1, JC_SCEN1_sem = std.error(JC_SCEN1)) %>%
+  summarise(JC_SCEN1_m = mean(JC_SCEN1), JC_SCEN1_sem = std.error(JC_SCEN1)) %>%
   ggplot() +
   aes(x = promotion_category, weight = JC_SCEN1_m, ymin = JC_SCEN1_m - JC_SCEN1_sem, ymax = JC_SCEN1_m + JC_SCEN1_sem, fill = promotion_category) +
   geom_bar(fill = c(rwthfarben$lightblue, rwthfarben$red), width = 0.4) +
