@@ -38,6 +38,8 @@ raw_short$education <- ordered(raw_short$education, levels = c(1, 2, 3, 4, 5, 6,
 
 raw_short$activity <- ordered(raw_short$activity, levels = c(1, 2, 3, 4, 5, 6, 7))
 
+raw_short$age <- as.numeric(raw_short$age)
+
 raw_short$regfoc_1 <- as.numeric(raw_short$regfoc_1)
 raw_short$regfoc_2 <- as.numeric(raw_short$regfoc_2)
 raw_short$regfoc_3 <- as.numeric(raw_short$regfoc_3)
@@ -135,7 +137,7 @@ datensatz %>% select(age, gender) %>% psych::describe()
 datensatz %>%
   select(age) %>%
   ggplot() +
-  aes(x= age) +
+  aes(x = age) +
   geom_histogram(binwidth = 1) +
   labs(x = "Alter in Jahren", 
        y = "Häufigkeit", 
@@ -339,7 +341,8 @@ jmv::linReg(datensatz, dep = "JC_SCEN2", covs = c("PRO", "PRE"),
             qqPlot = TRUE)
 
 
-#Die multiple lineare Regression liefert zwei Modelle mit einem Prädiktoren (siehe Tabelle, $F(1, 430) = 16.07$, $p<.05$). 
+#Die multiple lineare Regression liefert zwei Modelle mit einem Prädiktoren
+# (siehe Tabelle, $F(1, 430) = 16.07$, $p<.05$). 
 #Dabei wird nur der promotion Fokus signifikant (siehe Tabelle). 
 
 #Tabelle 1: Prädiktor der multiplen linearen Regression.
