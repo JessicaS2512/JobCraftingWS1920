@@ -147,21 +147,6 @@ datensatz %>%
   theme_minimal() +
   NULL
 
-# Histogramm zur Geschlechtsverteilung:
-datensatz %>%
-  filter(gender != 3) %>%
-  select(gender) %>%
-  ggplot() +
-  aes(x= gender) +
-  geom_histogram(bins = 2) +
-  labs(x = "Geschlecht", 
-       y = "Häufigkeit", 
-       title = "Überwiegend weibliche Stichprobe", 
-       subtitle = "Histogramm zur Geschlechterverteilung (n=399)", 
-       caption =(" ")) +
-  theme_minimal() +
-  NULL
-
 # Der folgende Code zählt, wie viele Personen männlich bzw. weiblich waren:
 
 datensatz %>% 
@@ -178,6 +163,15 @@ datensatz%>%
   group_by(activity) %>%
   summarise(activity_count = n())
 
+# Der folgende Code zählt, wie viele Leute einen Prevention Focus bzw. keinen Prevention Focus haben:
+datensatz %>% 
+  group_by(prevention_category) %>%
+  summarise(prevention_category_count = n())
+
+# Der folgende Code zählt, wie viele Leute einen Promotion Focus bzw. keinen Promotion Focus haben:
+datensatz %>% 
+  group_by(promotion_category) %>%
+  summarise(promotion_category_count = n())
 
 # ALT Hypothese 1
 # Formulierung: Prevention focussed Menschen haben mehr Job Crafting bei schlechter Kommunikation als nicht-prevention focussed Menschen
@@ -240,9 +234,9 @@ datensatz %>%
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "Prevention Focus",
        y = "Job Crafting bei schlechter Kommunikation [0-5]",
-       title = "Personen mit Prevention Focus haben ein \nhöheres Job Crafting als Personen \nohne Prevention Focus",
+       title = "Personen mit Prevention Focus haben ein \nleicht höheres Job Crafting als Personen \nohne Prevention Focus",
        subtitle = "Unterschiede im Säulendiagramm [n=433]",
-       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts") +
+       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
   theme_linedraw() +
   NULL
 
@@ -254,6 +248,7 @@ t.test(datensatz$JC_SCEN1 ~datensatz$promotion_category)
 # Bericht: In der Stichprobe haben Personen mit Promotion Focus (M=3.98) ein höheres Job Crafting als
 # Personen ohne Promotion Focus (M=3.83). Dieser Unterschied ist signifikant (t(345.65)=-2.66, p < .01)
 # und liegt mit 95% Sicherheit zwischen -0.26 und -0.04 Punkten einer 6-stufigen Skala.
+
 
 # Visualisierung:
 
@@ -271,7 +266,7 @@ datensatz %>%
        y = "Job Crafting bei guter Kommunikation [0-5]",
        title = "Personen mit Promotion Focus haben ein \nhöheres Job Crafting als Personen \nohne Promotion Focus",
        subtitle = "Unterschiede im Säulendiagramm [n=433]",
-       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts") +
+       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
   theme_linedraw() +
   NULL
 
@@ -293,8 +288,8 @@ datensatz %>%
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Job Crafting bei schlechter Kommunikation",
-       y = "Prevention focus" [1-6],
-       title = "Es gibt einen schwachen Zusammenhang \nzwischen dem Job Crafting und dem \nPrevention focus.",
+       y = "Prevention Focus" [1-6],
+       title = "Es gibt einen schwachen Zusammenhang \nzwischen dem Job Crafting und dem \nPrevention Focus.",
        subtitle = "Pearson-Korrelation im Streudiagramm") +
   NULL
 
@@ -320,8 +315,8 @@ datensatz %>%
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Job Crafting bei guter Kommunikation",
-       y = "Promotion focus" [1-6],
-       title = "Es gibt einen Zusammenhang zwischen dem \nJob Crafting und dem Promotion focus.",
+       y = "Promotion Focus" [1-6],
+       title = "Es gibt einen Zusammenhang zwischen dem \nJob Crafting und dem Promotion Focus.",
        subtitle = "Pearson-Korrelation im Streudiagramm") +
   NULL
 
@@ -364,9 +359,9 @@ jmv::linReg(datensatz, dep = "JC_SCEN2", covs = c("PRO", "PRE"),
         axis.title = element_text(size=10)) +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
-  labs(x = "Promotion focus",
+  labs(x = "Promotion Focus",
        y = "Job Crafting bei schlechter Kommunikation" [1-6],
-       title = "Job Crafting bei qualitativ minderwertiger Kommunikation ist abhängig vom promotion Fokus.",
+       title = "Job Crafting bei qualitativ minderwertiger Kommunikation ist abhängig vom Promotion Focus.",
        subtitle = "Lineare Regression im Streudiagramm") +
   NULL
   
@@ -395,9 +390,9 @@ datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN1) +
         axis.title = element_text(size=10)) +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
-  labs(x = "Promotion focus",
+  labs(x = "Promotion Focus",
        y = "Job Crafting bei guter Kommunikation" [1-6],
-       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom promotion Fokus.",
+       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom Promotion Focus.",
        subtitle = "Lineare Regression im Streudiagramm") +
   NULL
 
@@ -410,9 +405,9 @@ datensatz %>% ggplot() + aes(x = PRE, y = JC_SCEN1) +
         axis.title = element_text(size=10)) +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
-  labs(x = "Prevention focus",
+  labs(x = "Prevention Focus",
        y = "Job Crafting bei guter Kommunikation" [1-6],
-       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom prevention Fokus.",
+       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom Prevention Focus.",
        subtitle = "Lineare Regression im Streudiagramm") +
   NULL
 
