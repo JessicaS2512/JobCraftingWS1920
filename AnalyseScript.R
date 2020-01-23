@@ -231,7 +231,7 @@ datensatz %>%
   geom_errorbar(width = 0.2) +
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "Prevention Focus",
-       y = "Job Crafting bei schlechter Kommunikation [0-5]",
+       y = "Job Crafting bei \nschlechter Kommunikation [0-5]",
        title = "Personen mit Prevention Focus haben ein \nleicht höheres Job Crafting als Personen \nohne Prevention Focus.",
        subtitle = "Unterschiede im Säulendiagramm [n=433]",
        caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
@@ -259,7 +259,7 @@ datensatz %>%
   geom_errorbar(width = 0.2) +
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "Promotion Focus",
-       y = "Job Crafting bei guter Kommunikation [0-5]",
+       y = "Job Crafting bei \nguter Kommunikation [0-5]",
        title = "Personen mit Promotion Focus haben ein \nhöheres Job Crafting als Personen \nohne Promotion Focus.",
        subtitle = "Unterschiede im Säulendiagramm [n=433]",
        caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
@@ -350,7 +350,7 @@ jmv::linReg(datensatz, dep = "JC_SCEN2", covs = c("PRO", "PRE"),
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Promotion Focus",
-       y = "Job Crafting bei schlechter Kommunikation" [1-6],
+       y = "Job Crafting bei \nschlechter Kommunikation" [1-6],
        title = "Job Crafting bei qualitativ minderwertiger Kommunikation ist abhängig vom Promotion Focus.",
        subtitle = "Lineare Regression im Streudiagramm") +
   NULL
@@ -379,7 +379,7 @@ datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN1) +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Promotion Focus",
-       y = "Job Crafting bei guter Kommunikation" [1-6],
+       y = "Job Crafting bei \nguter Kommunikation" [1-6],
        title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom Promotion Focus.",
        subtitle = "Lineare Regression im Streudiagramm") +
   NULL
@@ -392,7 +392,7 @@ datensatz %>% ggplot() + aes(x = PRE, y = JC_SCEN1) +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Prevention Focus",
-       y = "Job Crafting bei guter Kommunikation" [1-6],
+       y = "Job Crafting bei \nguter Kommunikation" [1-6],
        title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom Prevention Focus.",
        subtitle = "Lineare Regression im Streudiagramm") +
   NULL
