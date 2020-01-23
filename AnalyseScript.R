@@ -38,6 +38,8 @@ raw_short$education <- ordered(raw_short$education, levels = c(1, 2, 3, 4, 5, 6,
 
 raw_short$activity <- ordered(raw_short$activity, levels = c(1, 2, 3, 4, 5, 6, 7))
 
+raw_short$age <- as.numeric(raw_short$age)
+
 raw_short$regfoc_1 <- as.numeric(raw_short$regfoc_1)
 raw_short$regfoc_2 <- as.numeric(raw_short$regfoc_2)
 raw_short$regfoc_3 <- as.numeric(raw_short$regfoc_3)
@@ -108,6 +110,7 @@ schluesselliste <- list(REGFOC = c("-regfoc_1", "-regfoc_2", "-regfoc_3", "-regf
                         PRO = c("-regfoc_1", "-regfoc_2", "-regfoc_3", "-regfoc_4"),
                         PRE = c("-regfoc_5", "-regfoc_6", "-regfoc_7"))
 
+
 scoreItems(schluesselliste, raw_short)
 
 scores <- scoreItems(schluesselliste, raw_short, missing = TRUE, min = 1, max = 6)
@@ -122,6 +125,23 @@ datensatz <- datensatz %>%
   select(-starts_with("jc_scen2", ignore.case = F))
 
 saveRDS(datensatz, "data/datensatz.rds")
+
+# NEU Mediansplit:
+
+median(datensatz$PRE)
+median(datensatz$PRO)
+
+datensatz <- datensatz %>%
+  mutate(prevention_category = case_when(PRE > 5.666667 ~ "Prevention Focus",
+                                         TRUE ~ "Kein Prevention Focus"))
+
+datensatz <- datensatz %>%
+  mutate(promotion_category = case_when(PRO > 4.75 ~ "Promotion Focus",
+                                        TRUE ~ "Kein Promotion Focus"))
+
+datensatz$prevention_category <- as.factor(datensatz$prevention_category)
+datensatz$promotion_category <- as.factor(datensatz$promotion_category)
+
 # Statistische Analyse und Grafiken:----
 
 # Deskriptive Statistik zum Alter und Geschlecht:
@@ -135,28 +155,13 @@ datensatz %>% select(age, gender) %>% psych::describe()
 datensatz %>%
   select(age) %>%
   ggplot() +
-  aes(x= age) +
+  aes(x = age) +
   geom_histogram(binwidth = 1) +
   labs(x = "Alter in Jahren", 
        y = "Häufigkeit", 
        title = "Junge, leicht bimodal verteilte Stichprobe", 
        subtitle = "Histogramm zur Altersverteilung (n=399)", 
        caption = "binwidth = 1") +
-  theme_minimal() +
-  NULL
-
-# Histogramm zur Geschlechtsverteilung:
-datensatz %>%
-  filter(gender != 3) %>%
-  select(gender) %>%
-  ggplot() +
-  aes(x= gender) +
-  geom_histogram(bins = 2) +
-  labs(x = "Geschlecht", 
-       y = "Häufigkeit", 
-       title = "Überwiegend weibliche Stichprobe", 
-       subtitle = "Histogramm zur Geschlechterverteilung (n=399)", 
-       caption =(" ")) +
   theme_minimal() +
   NULL
 
@@ -176,6 +181,15 @@ datensatz%>%
   group_by(activity) %>%
   summarise(activity_count = n())
 
+# Der folgende Code zählt, wie viele Leute einen Prevention Focus bzw. keinen Prevention Focus haben:
+datensatz %>% 
+  group_by(prevention_category) %>%
+  summarise(prevention_category_count = n())
+
+# Der folgende Code zählt, wie viele Leute einen Promotion Focus bzw. keinen Promotion Focus haben:
+datensatz %>% 
+  group_by(promotion_category) %>%
+  summarise(promotion_category_count = n())
 
 # ALT Hypothese 1
 # Formulierung: Prevention focussed Menschen haben mehr Job Crafting bei schlechter Kommunikation als nicht-prevention focussed Menschen
@@ -202,18 +216,6 @@ datensatz%>%
 
 # der mittlere Unterschied von -0.124 ist signifikant
 
-# NEU Mediansplit:
-
-median(datensatz$PRE)
-median(datensatz$PRO)
-
-datensatz <- datensatz %>%
-  mutate(prevention_category = case_when(PRE > 5.666667 ~ "Prevention Focus",
-                                          TRUE ~ "Kein Prevention Focus"))
-
-datensatz <- datensatz %>%
-  mutate(promotion_category = case_when(PRO > 4.75 ~ "Promotion Focus",
-                                         TRUE ~ "Kein Promotion Focus"))
 
 # NEU Hypothese 1: Personen mit einem prevention focus haben ein höheres Job Crafting bei qualitativ minderwertiger 
 # Kommunikation von organisatorischen Veränderungen in einem Unternehmen als Personen ohne prevention focus.
@@ -228,20 +230,18 @@ t.test(datensatz$JC_SCEN2 ~datensatz$prevention_category)
   
 datensatz %>%
   group_by(prevention_category) %>%
-  summarise(JC_SCEN2_m = mean(JC_SCEN2)-1, JC_SCEN2_sem = std.error(JC_SCEN2)) %>%
+  summarise(JC_SCEN2_m = mean(JC_SCEN2), JC_SCEN2_sem = std.error(JC_SCEN2)) %>%
   ggplot() +
   aes(x = prevention_category, weight = JC_SCEN2_m, ymin = JC_SCEN2_m - JC_SCEN2_sem, ymax = JC_SCEN2_m + JC_SCEN2_sem, fill = prevention_category) +
   geom_bar(fill = c(rwthfarben$lightblue, rwthfarben$red), width = 0.4) +
   geom_errorbar(width = 0.2) +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "Prevention Focus",
-       y = "Job Crafting bei schlechter Kommunikation [0-5]",
-       title = "Personen mit Prevention Focus haben ein \nhöheres Job Crafting als Personen \nohne Prevention Focus",
+       y = "Job Crafting bei \nschlechter Kommunikation [0-5]",
+       title = "Personen mit Prevention Focus haben ein \nleicht höheres Job Crafting als Personen \nohne Prevention Focus.",
        subtitle = "Unterschiede im Säulendiagramm [n=433]",
-       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts") +
-  theme_linedraw() +
+       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
+  theme_minimal() +
   NULL
 
 # NEU Hypothese 2: Personen mit einem Promotion Focus haben ein höheres Job Crafting bei qualitativ 
@@ -253,24 +253,23 @@ t.test(datensatz$JC_SCEN1 ~datensatz$promotion_category)
 # Personen ohne Promotion Focus (M=3.83). Dieser Unterschied ist signifikant (t(345.65)=-2.66, p < .01)
 # und liegt mit 95% Sicherheit zwischen -0.26 und -0.04 Punkten einer 6-stufigen Skala.
 
+
 # Visualisierung:
 
 datensatz %>%
   group_by(promotion_category) %>%
-  summarise(JC_SCEN1_m = mean(JC_SCEN1)-1, JC_SCEN1_sem = std.error(JC_SCEN1)) %>%
+  summarise(JC_SCEN1_m = mean(JC_SCEN1), JC_SCEN1_sem = std.error(JC_SCEN1)) %>%
   ggplot() +
   aes(x = promotion_category, weight = JC_SCEN1_m, ymin = JC_SCEN1_m - JC_SCEN1_sem, ymax = JC_SCEN1_m + JC_SCEN1_sem, fill = promotion_category) +
   geom_bar(fill = c(rwthfarben$lightblue, rwthfarben$red), width = 0.4) +
   geom_errorbar(width = 0.2) +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
   scale_y_continuous(limits = c(0,5)) +
   labs(x = "Promotion Focus",
-       y = "Job Crafting bei guter Kommunikation [0-5]",
-       title = "Personen mit Promotion Focus haben ein \nhöheres Job Crafting als Personen \nohne Promotion Focus",
+       y = "Job Crafting bei \nguter Kommunikation [0-5]",
+       title = "Personen mit Promotion Focus haben ein \nhöheres Job Crafting als Personen \nohne Promotion Focus.",
        subtitle = "Unterschiede im Säulendiagramm [n=433]",
-       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts") +
-  theme_linedraw() +
+       caption = "Fehlerindikatoren zeigen Standardfehler des Mittelwerts.") +
+  theme_minimal() +
   NULL
 
 # Hypothese 6: Je höher der prevention Fokus, desto höher ist das Job Crafting bei qualitativ minderwertiger Kommunikation
@@ -285,14 +284,12 @@ datensatz %>%
   aes(x = JC_SCEN2, y = PRE) +
   geom_jitter(alpha = 0.25) +
   geom_smooth(method = lm, color = "black") +
-  cowplot::theme_half_open() +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+ theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Job Crafting bei schlechter Kommunikation",
-       y = "Prevention focus" [1-6],
-       title = "Es gibt einen schwachen Zusammenhang \nzwischen dem Job Crafting und dem \nPrevention focus.",
+       y = "Prevention Focus" [1-6],
+       title = "Es gibt einen schwachen Zusammenhang \nzwischen dem Job Crafting und dem \nPrevention Focus.",
        subtitle = "Pearson-Korrelation im Streudiagramm") +
   NULL
 
@@ -312,14 +309,12 @@ datensatz %>%
   aes(x = JC_SCEN1, y = PRO) +
   geom_jitter(alpha = 0.25, width = 0.1, height = 0.1) +
   geom_smooth(method = lm, color = "black") +
-  cowplot::theme_half_open() +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+  theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
   labs(x = "Job Crafting bei guter Kommunikation",
-       y = "Promotion focus" [1-6],
-       title = "Es gibt einen Zusammenhang zwischen dem \nJob Crafting und dem Promotion focus.",
+       y = "Promotion Focus" [1-6],
+       title = "Es gibt einen Zusammenhang zwischen dem \nJob Crafting und dem Promotion Focus.",
        subtitle = "Pearson-Korrelation im Streudiagramm") +
   NULL
 
@@ -339,7 +334,8 @@ jmv::linReg(datensatz, dep = "JC_SCEN2", covs = c("PRO", "PRE"),
             qqPlot = TRUE)
 
 
-#Die multiple lineare Regression liefert zwei Modelle mit einem Prädiktoren (siehe Tabelle, $F(1, 430) = 16.07$, $p<.05$). 
+#Die multiple lineare Regression liefert zwei Modelle mit einem Prädiktoren
+# (siehe Tabelle, $F(1, 430) = 16.07$, $p<.05$). 
 #Dabei wird nur der promotion Fokus signifikant (siehe Tabelle). 
 
 #Tabelle 1: Prädiktor der multiplen linearen Regression.
@@ -356,14 +352,12 @@ jmv::linReg(datensatz, dep = "JC_SCEN2", covs = c("PRO", "PRE"),
   datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN2) + 
   geom_point(alpha = 0.25) + 
   geom_smooth(method = "lm", color = "black") +
-                cowplot::theme_half_open() + 
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+                theme_minimal() + 
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
-  labs(x = "Promotion focus",
-       y = "Job Crafting bei schlechter Kommunikation" [1-6],
-       title = "Job Crafting bei qualitativ minderwertiger Kommunikation ist abhängig vom promotion Fokus.",
+  labs(x = "Promotion Focus",
+       y = "Job Crafting bei \nschlechter Kommunikation" [1-6],
+       title = "Job Crafting bei qualitativ minderwertiger Kommunikation ist abhängig vom Promotion Focus.",
        subtitle = "Lineare Regression im Streudiagramm") +
   NULL
   
@@ -387,14 +381,12 @@ jmv::linReg(datensatz, dep = "JC_SCEN1", covs = c("PRO", "PRE"),
 datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN1) + 
   geom_point(alpha = 0.25) + 
   geom_smooth(method = "lm", color = "black") +
-                cowplot::theme_half_open() +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+                theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
-  labs(x = "Promotion focus",
-       y = "Job Crafting bei guter Kommunikation" [1-6],
-       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom promotion Fokus.",
+  labs(x = "Promotion Focus",
+       y = "Job Crafting bei \nguter Kommunikation" [1-6],
+       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom Promotion Focus.",
        subtitle = "Lineare Regression im Streudiagramm") +
   NULL
 
@@ -402,14 +394,12 @@ datensatz %>% ggplot() + aes(x = PRO, y = JC_SCEN1) +
 datensatz %>% ggplot() + aes(x = PRE, y = JC_SCEN1) + 
   geom_point(alpha = 0.25) + 
   geom_smooth(method = "lm", color = "black") +
-                cowplot::theme_half_open() +
-  theme(plot.title = element_text(size=12),
-        axis.title = element_text(size=10)) +
+                theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
-  labs(x = "Prevention focus",
-       y = "Job Crafting bei guter Kommunikation" [1-6],
-       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom prevention Fokus.",
+  labs(x = "Prevention Focus",
+       y = "Job Crafting bei \nguter Kommunikation" [1-6],
+       title = "Job Crafting bei qualitativ hochwertiger Kommunikation ist abhängig vom Prevention Focus.",
        subtitle = "Lineare Regression im Streudiagramm") +
   NULL
 
@@ -419,4 +409,111 @@ datensatz %>% ggplot() + aes(x = PRE, y = JC_SCEN1) +
   #Intercept       2.749    0.2076    13.24    < .001                      
   #PRO             0.110    0.0301     3.66    < .001              0.176   
   #PRE             0.119    0.0356     3.34    < .001              0.160 
+
+
+
+# two-way Anova zur schlechten Kommunikation
+datensatz %>%
+  ANOVA(dep = "JC_SCEN2", factors = c("prevention_category", "promotion_category"),
+        effectSize = "partEta",
+        postHoc = JC_SCEN2 ~ prevention_category + promotion_category + prevention_category:promotion_category,
+        emMeans = ~ prevention_category + promotion_category + prevention_category:promotion_category,
+        emmPlots = TRUE) 
+
+datensatz %>%
+  group_by(prevention_category, promotion_category) %>%
+  summarise(JC_SCEN2_mean = mean(JC_SCEN2),
+            count = n(),
+            JC_SCEN2_se = std.error(JC_SCEN2)) %>%
+  mutate(JC_SCEN2_ci = JC_SCEN2_se * 1.96) %>%
+  ggplot() +
+  aes(x = prevention_category, color = promotion_category, y = JC_SCEN2_mean,
+      ymin = JC_SCEN2_mean - JC_SCEN2_ci,
+      ymax = JC_SCEN2_mean + JC_SCEN2_ci,
+      group = promotion_category,
+      group = prevention_category) +
+  geom_errorbar(width = 0.08) +
+  geom_point() +
+  geom_line() +
+  scale_y_continuous(limits = c(1,6), breaks = 1:6) +
+  labs(title = "Es gibt Unterschiede hinsichtlich des \nJob Craftings, die abhängig davon sind, \nob man einen Promotion oder Prevention \nFocus hat.",
+       subtitle = "Mittelwertplot mit 95%-Konfidenzintervall",
+       x = "Prevention Focus",
+       color = "Promotion Focus",
+       y = "Job Crafting bei \nschlechter Kommunikation") +
+theme_minimal() +
+  NULL
+
+# Bericht: Es gibt einen Unterschied zwischen Personen mit und ohne Prevention Focus in 
+# Hinblick auf das Job Crafting bei schlechter Kommunikation (F(1,429)=4.24, p < .05).
+# Außerdem gibt es einen Unterschied zwischen Personen mit und ohne Promotion Focus (F(1, 429)=8.13, p < .01).
+
+# two-way Anova zur guten Kommunikation
+
+datensatz %>%
+  ANOVA(dep = "JC_SCEN1", factors = c("prevention_category", "promotion_category"),
+        effectSize = "partEta",
+        postHoc = JC_SCEN1 ~ prevention_category + promotion_category + prevention_category:promotion_category,
+        emMeans = ~ prevention_category + promotion_category + prevention_category:promotion_category,
+        emmPlots = TRUE) 
+
+datensatz %>%
+  group_by(prevention_category, promotion_category) %>%
+  summarise(JC_SCEN1_mean = mean(JC_SCEN1),
+            count = n(),
+            JC_SCEN1_se = std.error(JC_SCEN1)) %>%
+  mutate(JC_SCEN1_ci = JC_SCEN1_se * 1.96) %>%
+  ggplot() +
+  aes(x = prevention_category, color = promotion_category, y = JC_SCEN1_mean,
+      ymin = JC_SCEN1_mean - JC_SCEN1_ci,
+      ymax = JC_SCEN1_mean + JC_SCEN1_ci,
+      group = promotion_category,
+      group = prevention_category) +
+  geom_errorbar(width = 0.08) +
+  geom_point() +
+  geom_line() +
+  scale_y_continuous(limits = c(1,6), breaks = 1:6) +
+  labs(title = "Es gibt Unterschiede hinsichtlich des \nJob Craftings, die abhängig davon sind, \nob man einen Promotion oder Prevention \nFocus hat.",
+       subtitle = "Mittelwertplot mit 95%-Konfidenzintervall",
+       x = "Prevention Focus",
+       color = "Promotion Focus",
+       y = "Job Crafting bei \nguter Kommunikation") +
+  theme_minimal() +
+  NULL
+
+# Bericht: Es gibt einen Unterschied zwischen Personen mit und ohne Prevention Focus in 
+# Hinblick auf das Job Crafting bei guter Kommunikation (F(1,429)=9.91, p < .01).
+# Außerdem gibt es einen Unterschied zwischen Personen mit und ohne Promotion Focus (F(1, 429)=5.88, p < .05).
+
+
+# Korrelation von Promotion Focus und Prevention Focus:
+
+mean(datensatz$PRO)
+
+mean(datensatz$PRE)
+
+sd(datensatz$PRO)
+
+sd(datensatz$PRE)
+
+cor(datensatz$PRE, datensatz$PRO, method = "pearson")
+cor.test(datensatz$PRE, datensatz$PRO)
+
+# Visualisierung
+datensatz %>%
+  ggplot() +
+  aes(x = PRE, y = PRO) +
+  geom_jitter(alpha = 0.25) +
+  geom_smooth(method = lm, color = "black") +
+  theme_minimal() +
+  scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
+  scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
+  labs(x = "Prevention Focus",
+       y = "Promotion Focus" [1-6],
+       title = "Es gibt einen  Zusammenhang zwischen dem \nPrevention und Promotion Focus.",
+       subtitle = "Pearson-Korrelation im Streudiagramm") +
+  NULL
+
+
+
 
