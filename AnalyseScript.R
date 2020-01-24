@@ -151,12 +151,18 @@ datensatz %>% select(age, gender) %>% psych::describe()
 #age        399     31.01   12.95     25       18    81     63    0.65
 #gender     399     1.62     0.49      2        1    3      2     0.02
 
+
 # Histogramm zur Altersverteilung:
+
+
+mean_age <- mean(datensatz$age, na.rm = TRUE)
+
 datensatz %>%
   select(age) %>%
   ggplot() +
   aes(x = age) +
   geom_histogram(binwidth = 1) +
+  geom_vline(xintercept=mean_age, color="blue") +
   labs(x = "Alter in Jahren", 
        y = "Häufigkeit", 
        title = "Junge, leicht bimodal verteilte Stichprobe", 
@@ -281,16 +287,17 @@ cor.test(datensatz$PRE, datensatz$JC_SCEN2)
 # Visualisierung Hypothese 6:
 datensatz %>%
   ggplot() +
-  aes(x = JC_SCEN2, y = PRE) +
+  aes(x = PRE, y = JC_SCEN2) +
   geom_jitter(alpha = 0.25) +
   geom_smooth(method = lm, color = "black") +
  theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
-  labs(x = "Job Crafting bei schlechter Kommunikation",
-       y = "Prevention Focus" [1-6],
-       title = "Es gibt einen schwachen Zusammenhang \nzwischen dem Job Crafting und dem \nPrevention Focus.",
-       subtitle = "Pearson-Korrelation im Streudiagramm (n=433)") +
+  labs(x = "Prevention Focus",
+       y = "Job Crafting bei \nschlechter Kommunikation",
+       title = "Es gibt einen schwachen Zusammenhang zwischen \ndem Job Crafting und dem Prevention Focus.",
+       subtitle = "Pearson-Korrelation im Streudiagramm (n=433)",
+       caption = "1 = Stimme gar nicht zu, 6 = Stimme völlig zu") +
   NULL
 
 # Bericht Hypothese 6: Es gibt einen signifikanten Zusammenhang zwischen dem Prevention focus und dem Job Crafting bei
@@ -306,16 +313,17 @@ cor.test(datensatz$PRO, datensatz$JC_SCEN1)
 # Visualisierung Hypothese 7:
 datensatz %>%
   ggplot() +
-  aes(x = JC_SCEN1, y = PRO) +
+  aes(x = PRO, y = JC_SCEN1) +
   geom_jitter(alpha = 0.25, width = 0.1, height = 0.1) +
   geom_smooth(method = lm, color = "black") +
   theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
-  labs(x = "Job Crafting bei guter Kommunikation",
-       y = "Promotion Focus" [1-6],
+  labs(x = "Promotion Focus",
+       y = "Job Crafting \nbei guter Kommunikation",
        title = "Es gibt einen schwachen Zusammenhang zwischen \ndem Job Crafting und dem Promotion Focus.",
-       subtitle = "Pearson-Korrelation im Streudiagramm (n=433)") +
+       subtitle = "Pearson-Korrelation im Streudiagramm (n=433)",
+       caption = "1 = Stimme gar nicht zu, 6 = Stimme völlig zu") +
   NULL
 
 # Bericht Hypothese 7: Es gibt einen signifikanten Zusammenhang zwischen dem Promotion focus und dem Job Crafting bei
@@ -436,11 +444,12 @@ datensatz %>%
   geom_point() +
   geom_line() +
   scale_y_continuous(limits = c(1,6), breaks = 1:6) +
-  labs(title = "Es gibt Unterschiede hinsichtlich des \nJob Craftings, die abhängig davon sind, \nob man einen Promotion oder Prevention \nFocus hat.",
+  labs(title = "Es gibt Unterschiede hinsichtlich des Job Craftings, die abhängig \ndavon sind, ob man einen Promotion oder Prevention Focus hat.",
        subtitle = "Mittelwertplot mit 95%-Konfidenzintervall (n=433)",
        x = "Prevention Focus",
        color = "Promotion Focus",
-       y = "Job Crafting bei \nschlechter Kommunikation") +
+       y = "Job Crafting bei \nschlechter Kommunikation",
+       caption = "1 = Stimme gar nicht zu, 6 = Stimme völlig zu") +
 theme_minimal() +
   NULL
 
@@ -473,11 +482,12 @@ datensatz %>%
   geom_point() +
   geom_line() +
   scale_y_continuous(limits = c(1,6), breaks = 1:6) +
-  labs(title = "Es gibt Unterschiede hinsichtlich des \nJob Craftings, die abhängig davon sind, \nob man einen Promotion oder Prevention \nFocus hat.",
+  labs(title = "Es gibt Unterschiede hinsichtlich des Job Craftings, die abhängig \ndavon sind, ob man einen Promotion oder Prevention Focus hat.",
        subtitle = "Mittelwertplot mit 95%-Konfidenzintervall (n=433)",
        x = "Prevention Focus",
        color = "Promotion Focus",
-       y = "Job Crafting bei \nguter Kommunikation") +
+       y = "Job Crafting bei \nguter Kommunikation",
+       caption = "1 = Stimme gar nicht zu, 6 = Stimme völlig zu") +
   theme_minimal() +
   NULL
 
@@ -511,7 +521,8 @@ datensatz %>%
   labs(x = "Prevention Focus",
        y = "Promotion Focus" [1-6],
        title = "Es gibt einen  schwachen Zusammenhang zwischen dem \nPrevention und Promotion Focus.",
-       subtitle = "Pearson-Korrelation im Streudiagramm (n=433)") +
+       subtitle = "Pearson-Korrelation im Streudiagramm (n=433)",
+       caption = "1 = Stimme gar nicht zu, 6 = Stimme völlig zu") +
   NULL
 
 
