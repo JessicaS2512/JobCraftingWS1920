@@ -308,7 +308,7 @@ datensatz %>%
 # Kommunikation von Veränderungen in einem Unternehmen.
 
 cor(datensatz$PRO, datensatz$JC_SCEN1, method = "pearson")
-cor.test(datensatz$PRO, datensatz$JC_SCEN1) 
+cor.test(datensatz$PRO, datensatz$JC_SCEN1)
 
 # Visualisierung Hypothese 7:
 datensatz %>%
