@@ -16,6 +16,7 @@ library(questionr)
 devtools::install_github("HCIC/r-tools")
 
 rwthfarben <- hcictools::rwth.colorpalette()
+
 # Rohdaten laden: ----
 raw <- read_csv("job_crafting.csv")
 
@@ -162,7 +163,7 @@ datensatz %>%
   ggplot() +
   aes(x = age) +
   geom_histogram(binwidth = 1) +
-  geom_vline(xintercept=mean_age, color="blue") +
+  geom_vline(xintercept=mean_age, color = rwthfarben$blue) +
   labs(x = "Alter in Jahren", 
        y = "Häufigkeit", 
        title = "Junge, leicht bimodal verteilte Stichprobe", 
@@ -289,7 +290,7 @@ datensatz %>%
   ggplot() +
   aes(x = PRE, y = JC_SCEN2) +
   geom_jitter(alpha = 0.25) +
-  geom_smooth(method = lm, color = "black") +
+  geom_smooth(method = lm, color = rwthfarben$blue) +
  theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
@@ -315,7 +316,7 @@ datensatz %>%
   ggplot() +
   aes(x = PRO, y = JC_SCEN1) +
   geom_jitter(alpha = 0.25, width = 0.1, height = 0.1) +
-  geom_smooth(method = lm, color = "black") +
+  geom_smooth(method = lm, color = rwthfarben$blue) +
   theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
@@ -428,6 +429,8 @@ datensatz %>%
         emMeans = ~ prevention_category + promotion_category + prevention_category:promotion_category,
         emmPlots = TRUE) 
 
+color_group <- c(rwthfarben$blue, rwthfarben$red)
+
 datensatz %>%
   group_by(prevention_category, promotion_category) %>%
   summarise(JC_SCEN2_mean = mean(JC_SCEN2),
@@ -443,6 +446,7 @@ datensatz %>%
   geom_errorbar(width = 0.08) +
   geom_point() +
   geom_line() +
+  scale_colour_manual(values = color_group) +
   scale_y_continuous(limits = c(1,6), breaks = 1:6) +
   labs(title = "Es gibt Unterschiede hinsichtlich des Job Craftings, die abhängig \ndavon sind, ob man einen Promotion oder Prevention Focus hat.",
        subtitle = "Mittelwertplot mit 95%-Konfidenzintervall (n=433)",
@@ -450,7 +454,7 @@ datensatz %>%
        color = "Promotion Focus",
        y = "Job Crafting bei \nschlechter Kommunikation",
        caption = "1 = Stimme gar nicht zu, 6 = Stimme völlig zu") +
-theme_minimal() +
+  theme_minimal() +
   NULL
 
 # Bericht: Es gibt einen Unterschied zwischen Personen mit und ohne Prevention Focus in 
@@ -481,6 +485,7 @@ datensatz %>%
   geom_errorbar(width = 0.08) +
   geom_point() +
   geom_line() +
+  scale_colour_manual(values = color_group) +
   scale_y_continuous(limits = c(1,6), breaks = 1:6) +
   labs(title = "Es gibt Unterschiede hinsichtlich des Job Craftings, die abhängig \ndavon sind, ob man einen Promotion oder Prevention Focus hat.",
        subtitle = "Mittelwertplot mit 95%-Konfidenzintervall (n=433)",
@@ -514,7 +519,7 @@ datensatz %>%
   ggplot() +
   aes(x = PRE, y = PRO) +
   geom_jitter(alpha = 0.25) +
-  geom_smooth(method = lm, color = "black") +
+  geom_smooth(method = lm, color = rwthfarben$blue) +
   theme_minimal() +
   scale_y_continuous(breaks = c(1:6), limits = c(1, 6)) +
   scale_x_continuous(breaks = c(1:6), limits = c(1, 6)) +
