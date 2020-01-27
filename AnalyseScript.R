@@ -168,7 +168,7 @@ datensatz %>%
        y = "Häufigkeit", 
        title = "Junge, leicht bimodal verteilte Stichprobe", 
        subtitle = "Histogramm zur Altersverteilung (n=399)", 
-       caption = "binwidth = 1") +
+       caption = "binwidth = 1, blaue Linie: M =") +
   theme_minimal() +
   NULL
 
