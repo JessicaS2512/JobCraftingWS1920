@@ -158,6 +158,8 @@ datensatz %>% select(age, gender) %>% psych::describe()
 
 mean_age <- mean(datensatz$age, na.rm = TRUE)
 
+mean(datensatz$age, na.rm = TRUE)
+
 datensatz %>%
   select(age) %>%
   ggplot() +
@@ -168,7 +170,7 @@ datensatz %>%
        y = "Häufigkeit", 
        title = "Junge, leicht bimodal verteilte Stichprobe", 
        subtitle = "Histogramm zur Altersverteilung (n=399)", 
-       caption = "binwidth = 1, blaue Linie: M =") +
+       caption = "binwidth = 1, blaue Linie: M = 31.01") +
   theme_minimal() +
   NULL
 
