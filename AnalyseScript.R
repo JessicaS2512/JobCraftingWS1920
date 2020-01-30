@@ -180,33 +180,60 @@ datensatz %>%
   group_by(gender) %>%
   summarise(gender_count = n())
 
+# Wie viele Personen haben einen PRO oder PRE unter/über 3,5?
+datensatz %>% 
+  group_by(PRO) %>%
+  summarise(PRO_count = n())
+
+datensatz %>% 
+  group_by(PRE) %>%
+  summarise(PRE_count = n())
+
+# Wie viele Leute haben einen PRO kleiner/gleich 3.5?
+1+2+4+4+4+6+8+8+12+18
+# = 67
+
+# Wie viele Leute haben einen PRO größer als 3.5?
+32+28+26+47+81+37+53+27+16+19
+# = 366
+# Es haben also 18.3% der Befragten einen Promotion Focus, der kleiner/gleich 3.5 ist.
+
+# Wie viele Leute haben einen PRE kleiner/gleich 3.5?
+1+2+1+1+3+5+1
+# = 14
+
+# Wie viele Leute haben einen PRE größer als 3.5?
+4+8+17+32+42+61+72+183
+# = 419
+# Es haben also nur 3.34% der Befragten einen Prevention Focus, der kleiner/gleich 3.5 ist.
+
 #Code zählt höchsten Bildungsabschluss
 datensatz%>%
   group_by(education) %>%
   summarise(education_count = n())
 
-#Code zählt Tätigkeit
-datensatz%>%
-  group_by(activity) %>%
-  summarise(activity_count = n())
-
-# Visualisierung der Tätigkeit:
+#Tätigkeit
 datensatz_tätigkeit <- datensatz
-
 ## Recoding datensatz_tätigkeit$activity into datensatz_tätigkeit$activity_rec
 datensatz_tätigkeit$activity_rec <- fct_recode(datensatz_tätigkeit$activity,
-               "Schüler" = "1",
-               "Studenten" = "2",
-               "Auszubildende" = "3",
-               "Angestellte" = "4",
-               "Selbstständige" = "5",
-               "Rentner" = "6",
-               "Arbeitssuchende" = "7")
+                                               "Schüler" = "1",
+                                               "Studenten" = "2",
+                                               "Auszubildende" = "3",
+                                               "Angestellte" = "4",
+                                               "Selbstständige" = "5",
+                                               "Rentner" = "6",
+                                               "Arbeitssuchende" = "7")
 
 datensatz_tätigkeit <- within(datensatz_tätigkeit, 
-                   activity_rec <- factor(activity_rec, 
-                                      levels=names(sort(table(activity_rec), 
-                                                        decreasing=TRUE))))
+                              activity_rec <- factor(activity_rec, 
+                                                     levels=names(sort(table(activity_rec), 
+                                                                       decreasing=TRUE))))
+datensatz_tätigkeit%>%
+  group_by(activity_rec) %>%
+  summarise(activity_rec_count = n())
+
+# Visualisierung der Tätigkeit:
+
 datensatz_tätigkeit %>%
   filter(!is.na(activity_rec)) %>%
   ggplot() +
