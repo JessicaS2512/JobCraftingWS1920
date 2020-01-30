@@ -190,6 +190,35 @@ datensatz%>%
   group_by(activity) %>%
   summarise(activity_count = n())
 
+# Visualisierung der Tätigkeit:
+datensatz_tätigkeit <- datensatz
+
+## Recoding datensatz_tätigkeit$activity into datensatz_tätigkeit$activity_rec
+datensatz_tätigkeit$activity_rec <- fct_recode(datensatz_tätigkeit$activity,
+               "Schüler" = "1",
+               "Studenten" = "2",
+               "Auszubildende" = "3",
+               "Angestellte" = "4",
+               "Selbstständige" = "5",
+               "Rentner" = "6",
+               "Arbeitssuchende" = "7")
+
+datensatz_tätigkeit <- within(datensatz_tätigkeit, 
+                   activity_rec <- factor(activity_rec, 
+                                      levels=names(sort(table(activity_rec), 
+                                                        decreasing=TRUE))))
+datensatz_tätigkeit %>%
+  filter(!is.na(activity_rec)) %>%
+  ggplot() +
+  aes(x = activity_rec)  +
+  geom_bar(fill = rwthfarben$blue) +
+  coord_flip() +
+  labs(x = "Tätigkeitstypen",
+       y = "Häufigkeit",
+       title = "Studenten und Angestellte sind die häufigsten Tätigkeitstypen.",
+       subtitle = "Tätigkeitstypen im Säulendiagramm (n=399)") +
+  theme_minimal()
+
 # Der folgende Code zählt, wie viele Leute einen Prevention Focus bzw. keinen Prevention Focus haben:
 datensatz %>% 
   group_by(prevention_category) %>%
